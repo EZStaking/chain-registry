@@ -43,7 +43,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url: 'https://8ball.info/8ball-genesis.json'
       },
-      versions: []
+      versions: [
+        {
+          name: 'v1',
+          recommended_version: 'v1',
+          compatible_versions: ['v1'],
+          cosmos_sdk_version: '0.46.7',
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64': 'https://8ball.info/8ball.tar.gz'
+          }
+        }
+      ]
     },
     logo_URIs: {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/8ball/images/8ball.png',
@@ -66,6 +77,11 @@ const chains: Chain[] = [
           id: 'ce168b8022e525650011352175fa020ce75edcfa',
           address: '45.141.122.178:34656',
           provider: 'genznodes'
+        },
+        {
+          id: '49778546e7511a1cd6dde65805cd70547c75ce2b',
+          address: 'rpc.8ball.nodexcapital.com:11056',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -94,6 +110,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-8ball.nodine.id',
           provider: 'Nodine.ID'
+        },
+        {
+          address: 'https://rpc.8ball.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       rest: [
@@ -120,6 +140,10 @@ const chains: Chain[] = [
         {
           address: 'https://api-8ball.nodine.id/',
           provider: 'Nodine.ID'
+        },
+        {
+          address: 'https://rest.8ball.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       grpc: [
@@ -130,6 +154,10 @@ const chains: Chain[] = [
         {
           address: '8ball-grpc.genznodes.dev:31090',
           provider: 'genznodes'
+        },
+        {
+          address: 'https://grpc.8ball.nodexcapital.com:443',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -162,6 +190,11 @@ const chains: Chain[] = [
         kind: 'TC Network',
         url: 'https://explorer.co.id/8ball',
         tx_page: 'https://explorer.co.id/8ball/tx/${txHash}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/8ball',
+        tx_page: 'https://explorer.nodexcapital.com/8ball/tx/${txHash}'
       }
     ]
   },
@@ -204,7 +237,15 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/ArableProtocol/acrechain/main/networks/mainnet/acre_9052-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.1',
+          recommended_version: 'v1.1.1',
+          compatible_versions: ['v1.1.1'],
+          binaries: {}
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -214,9 +255,9 @@ const chains: Chain[] = [
           provider: 'Kalia Network'
         },
         {
-          id: 'e29de0ba5c6eb3cc813211887af4e92a71c54204',
-          address: '65.108.1.225:46656',
-          provider: 'Ramuchi.tech'
+          id: '4238438afa73f6a15d0728377cc4c13c43f9903a',
+          address: 'acrechain-seed.ramuchi.tech:16656',
+          provider: 'ramuchi.tech'
         },
         {
           id: '1264ee73a2f40a16c2cbd80c1a824aad7cb082e4',
@@ -310,6 +351,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc.acre.tcnetwork.io',
           provider: 'TC Network'
+        },
+        {
+          address: 'https://acrechain-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       rest: [
@@ -340,6 +385,10 @@ const chains: Chain[] = [
         {
           address: 'https://rest.acre.tcnetwork.io',
           provider: 'TC Network'
+        },
+        {
+          address: 'https://acrechain-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       grpc: [
@@ -354,6 +403,10 @@ const chains: Chain[] = [
         {
           address: 'acre-grpc.genznodes.dev:27090',
           provider: 'genznodes'
+        },
+        {
+          address: 'https://acrechain-grpc.ramuchi.tech:1090',
+          provider: 'ramuchi.tech'
         }
       ],
       'evm-http-jsonrpc': [
@@ -467,7 +520,14 @@ const chains: Chain[] = [
       compatible_versions: ['agoric-upgrade-8'],
       genesis: {
         genesis_url: 'https://main.agoric.net/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'agoric-upgrade-8',
+          recommended_version: 'agoric-upgrade-8',
+          compatible_versions: ['agoric-upgrade-8']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -562,6 +622,10 @@ const chains: Chain[] = [
         {
           address: 'agoric-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'agoric.grpc.kjnodes.com:27090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -622,7 +686,22 @@ const chains: Chain[] = [
       },
       genesis: {
         genesis_url: 'https://archive.aioz.network/aioz_168-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.0',
+          recommended_version: 'v1.2.0',
+          compatible_versions: ['v1.2.0'],
+          binaries: {
+            'linux/amd64':
+              'https://archive.aioz.network/aiozd-v1.2.0-linux-amd64.tar.gz',
+            'darwin/amd64':
+              'https://archive.aioz.network/aiozd-v1.2.0-darwin-amd64.tar.gz',
+            'windows/amd64':
+              'https://archive.aioz.network/aiozd-v1.2.0-windows-amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -736,7 +815,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/akash-network/net/master/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.22.0',
+          recommended_version: 'v0.22.0',
+          compatible_versions: ['v0.20.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/akash-network/node/releases/download/v0.22.0/akash_0.22.0_linux_amd64.zip',
+            'linux/arm64':
+              'https://github.com/akash-network/node/releases/download/v0.22.0/akash_0.22.0_linux_arm64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -972,7 +1064,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/vincadian/arkh-blockchain/blob/master/genesis/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0.0',
+          recommended_version: 'v2.0.0',
+          compatible_versions: ['v2.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/vincadian/arkh-blockchain/releases/download/latest/arkh-blockchain_latest_linux_amd64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/vincadian/arkh-blockchain/releases/download/latest/arkh-blockchain_latest_darwin_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: []
@@ -994,6 +1099,10 @@ const chains: Chain[] = [
         {
           address: 'https://arkh-rpc.kynraze.com',
           provider: 'Kynraze'
+        },
+        {
+          address: 'https://rpc.arkh.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       rest: [
@@ -1012,12 +1121,20 @@ const chains: Chain[] = [
         {
           address: 'https://arkh-api.kynraze.com',
           provider: 'Kynraze'
+        },
+        {
+          address: 'https://rest.arkh.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       grpc: [
         {
           address: 'grpc.arkh.nodestake.top:443',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://grpc.arkh.nodexcapital.com:443',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -1031,6 +1148,11 @@ const chains: Chain[] = [
         kind: 'Kynraze Explorer',
         url: 'https://explorer.kynraze.com/arkhadian',
         tx_page: 'https://explorer.kynraze.com/arkhadian/tx/${txHash}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/arkhadian',
+        tx_page: 'https://explorer.nodexcapital.com/arkhadian/tx/${txHash}'
       }
     ]
   },
@@ -1069,7 +1191,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/AssetMantle/genesisTransactions/main/mantle-1/final_genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.3.0',
+          recommended_version: 'v0.3.0',
+          compatible_versions: ['v0.3.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -1313,7 +1442,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/aura-nw/mainnet-artifacts/main/xstaxy-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'aura_v0.4.4',
+          recommended_version: 'aura_v0.4.4',
+          compatible_versions: ['aura_v0.4.4']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -1329,6 +1465,16 @@ const chains: Chain[] = [
         {
           id: '0b8bd8c1b956b441f036e71df3a4d96e85f843b8',
           address: '13.250.159.219:26656'
+        },
+        {
+          id: '9ee34b0829e9d85d88784aa17857fa1719760da2',
+          address: 'aura-peer.ramuchi.tech:30000',
+          provider: 'ramuchi.tech'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'aura.rpc.kjnodes.com:17659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -1360,6 +1506,14 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-aura.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://aura-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'https://aura.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -1382,6 +1536,14 @@ const chains: Chain[] = [
         {
           address: 'https://lcd-aura.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://aura-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'https://aura.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -1396,6 +1558,14 @@ const chains: Chain[] = [
         {
           address: 'https://grpc.aura.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://aura-grpc.ramuchi.tech:15000',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'aura.grpc.kjnodes.com:17090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -1418,6 +1588,13 @@ const chains: Chain[] = [
         tx_page: 'https://explorer.nodestake.top/aura/tx/${txHash}',
         account_page:
           'https://explorer.nodestake.top/aura/account/${accountAddress}'
+      },
+      {
+        kind: 'TC Network',
+        url: 'https://explorer.tcnetwork.io/aura',
+        tx_page: 'https://explorer.tcnetwork.io/aura/transaction/${txHash}',
+        account_page:
+          'https://explorer.tcnetwork.io/aura/account/${accountAddress}'
       }
     ]
   },
@@ -1458,7 +1635,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/resources/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.29.0',
+          recommended_version: 'v0.29.0',
+          compatible_versions: ['v0.29.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/axelarnetwork/axelar-core/releases/download/v0.29.0/axelard-linux-amd64-v0.29.0',
+            'darwin/amd64':
+              'https://github.com/axelarnetwork/axelar-core/releases/download/v0.29.0/axelard-darwin-amd64-v0.29.0'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -1571,6 +1761,10 @@ const chains: Chain[] = [
         {
           address: 'https://axelar.rpc.interchain.ivaldilabs.xyz',
           provider: 'ivaldilabs'
+        },
+        {
+          address: 'https://axelar-rpc.ibs.team',
+          provider: 'Inter Blockchain Services'
         }
       ],
       rest: [
@@ -1629,6 +1823,10 @@ const chains: Chain[] = [
         {
           address: 'https://axelar.rest.interchain.ivaldilabs.xyz',
           provider: 'ivaldilabs'
+        },
+        {
+          address: 'https://axelar-api.ibs.team',
+          provider: 'Inter Blockchain Services'
         }
       ],
       grpc: [
@@ -1723,7 +1921,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/bandprotocol/launch/master/laozi-mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.4.1',
+          recommended_version: 'v2.4.1',
+          compatible_versions: ['v2.4.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -1881,7 +2086,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/bze-alphateam/bze/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v6.0.0',
+          recommended_version: 'v6.0.0',
+          compatible_versions: ['v6.0.0'],
+          binaries: {
+            'darwin/amd64':
+              'https://github.com/bze-alphateam/bze/releases/download/v6.0.0/bze-6.0.0-darwin-amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/bze-alphateam/bze/releases/download/v6.0.0/bze-6.0.0-darwin-arm64.tar.gz',
+            'linux/amd64':
+              'https://github.com/bze-alphateam/bze/releases/download/v6.0.0/bze-6.0.0-linux-amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/bze-alphateam/bze/releases/download/v6.0.0/bze-6.0.0-linux-arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/bze-alphateam/bze/releases/download/v6.0.0/bze-6.0.0-win64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -1998,16 +2222,35 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/BitCannaGlobal/bcna',
-      recommended_version: 'v1.6.2',
-      compatible_versions: ['v1.6.2'],
+      recommended_version: 'v1.6.3',
+      compatible_versions: ['v1.6.1', 'v1.6.2', 'v1.6.3'],
       binaries: {
         'linux/amd64':
-          'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.2/bcna_linux_amd64.tar.gz'
+          'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_linux_amd64.tar.gz',
+        'darwin/arm64':
+          'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_darwin_arm64.tar.gz',
+        'darwin/amd64':
+          'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_darwin_amd64.tar.gz'
       },
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.6.3',
+          recommended_version: 'v1.6.3',
+          compatible_versions: ['v1.6.1', 'v1.6.2', 'v1.6.3'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_linux_amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_darwin_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.3/bcna_darwin_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -2017,19 +2260,9 @@ const chains: Chain[] = [
           provider: 'bitcanna'
         },
         {
-          id: '23671067d0fd40aec523290585c7d8e91034a771',
-          address: 'seed2.bitcanna.io:26656',
+          id: 'e2e7c704f766ef6b9e2c8dd61d963f8393b87966',
+          address: 'seed3.bitcanna.io:26656',
           provider: 'bitcanna'
-        },
-        {
-          id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
-          address: 'seeds.polkachu.com:13056',
-          provider: 'Polkachu'
-        },
-        {
-          id: '20e1000e88125698264454a884812746c2eb4807',
-          address: 'seeds.lavenderfive.com:13056',
-          provider: 'Lavender.Five Nodes 🐝'
         },
         {
           id: 'f0e6c86d769bf5c52f78e01864091690e731643f',
@@ -2037,21 +2270,36 @@ const chains: Chain[] = [
           provider: 'Panthea EU'
         },
         {
-          id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-          address: 'bitcanna-seed-1.allnodes.me:26656',
-          provider: 'Allnodes.com ⚡️ Nodes & Staking'
+          id: '20e1000e88125698264454a884812746c2eb4807',
+          address: 'seeds.lavenderfive.com:13056',
+          provider: 'Lavender.Five Nodes 🐝'
         },
         {
-          id: 'e726816f42831689eab9378d5d577f1d06d25716',
-          address: 'bitcanna-seed-2.allnodes.me:26656',
-          provider: 'Allnodes.com ⚡️ Nodes & Staking'
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'bitcanna.rpc.kjnodes.com:42659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
         {
-          id: 'ddb620e7c7a6b5a8a53352037cde927681012ab4',
-          address: '65.21.229.209:37656',
-          provider: 'Blockscope'
+          id: '21484408a7bcf0134689ddf52a7d9c8299cb65b5',
+          address: '176.9.139.74:36656',
+          provider: 'BitCanna'
+        },
+        {
+          id: 'a4c1e46441164c350f721cf142d52c136215e05c',
+          address: '135.181.176.55:36656',
+          provider: 'BitCanna'
+        },
+        {
+          id: '8fa7a04d55ca7d0ab70dc5cbc35d5cf26c5ecfb7',
+          address: '65.108.142.81:26682',
+          provider: 'Stakely'
+        },
+        {
+          id: 'ad820cb2fa85e525538207bb24ee49a61a74eb45',
+          address: '93.115.25.15:26656',
+          provider: 'Stakely'
         },
         {
           id: 'df99de6cec9152c517990317b340b8b9a307493c',
@@ -2064,9 +2312,24 @@ const chains: Chain[] = [
           provider: 'Panthea EU'
         },
         {
-          id: '57a3e858a5c860e6355683c88add28d52df6c24a',
-          address: '38.242.232.202:26656',
-          provider: 'Inter Blockchain Services'
+          id: '803fc66e3bd7b724921ef9c40636067f36e880c6',
+          address: '65.108.199.222:26357',
+          provider: 'AlxVoy'
+        },
+        {
+          id: '9425b897a9726efb1e56111a8b355026a1f3a497',
+          address: '65.108.238.203:46656',
+          provider: '[NODERS]TEAM'
+        },
+        {
+          id: '5a048cab1d183de5c465c56b29a16fd93a8bf9bd',
+          address: 'mainnet-bitcanna.konsortech.xyz:27656',
+          provider: 'KonsorTech'
+        },
+        {
+          id: '2235f1e518c5ea4a412f9dece386348eda356916',
+          address: 'bitcanna.alkia.net:26656',
+          provider: 'ALKIA'
         }
       ]
     },
@@ -2081,20 +2344,28 @@ const chains: Chain[] = [
           provider: 'ParanormalBrothers'
         },
         {
-          address: 'https://bitcanna-rpc.polkachu.com',
-          provider: 'Polkachu'
-        },
-        {
-          address: 'https://rpc-bitcanna-ia.cosmosia.notional.ventures/',
-          provider: 'Notional'
-        },
-        {
-          address: 'https://bitcanna-rpc.lavenderfive.com/',
-          provider: 'Lavender.Five Nodes 🐝'
-        },
-        {
           address: 'https://bcna-rpc.ibs.team/',
-          provider: 'Inter Blockchain Services'
+          provider: 'Inter Blockchain Services (former 3Tekos)'
+        },
+        {
+          address: 'https://bitcanna-rpc.panthea.eu',
+          provider: 'Panthea EU'
+        },
+        {
+          address: 'https://rpc.bitcanna.sgtstake.com/',
+          provider: 'SGTstake'
+        },
+        {
+          address: 'https://rpc-bitcanna.mintthemoon.xyz',
+          provider: 'mintthemoon'
+        },
+        {
+          address: 'https://bitcanna.rpc.m.anode.team',
+          provider: 'AlxVoy'
+        },
+        {
+          address: 'http://bitcanna.statesync.nodersteam.com:46657',
+          provider: '[NODERS]TEAM'
         },
         {
           address: 'https://bitcanna.nodejumper.io',
@@ -2103,6 +2374,36 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-bcna.kjinc.io/',
           provider: 'KJINC.io'
+        },
+        {
+          address: 'https://mainnet-bitcanna-rpc.konsortech.xyz',
+          provider: 'KonsorTech'
+        },
+        {
+          address: 'https://bitcanna.rpc.kjnodes.com',
+          provider: 'kjnodes'
+        },
+        {
+          address: 'http://bitcanna.alkia.net:26657',
+          provider: 'ALKIA'
+        },
+        {
+          address: 'https://bitcanna-rpc.lavenderfive.com/',
+          provider: 'Lavender.Five Nodes 🐝'
+        }
+      ],
+      grpc: [
+        {
+          address: 'https://grpc.bitcanna.io',
+          provider: 'bitcanna'
+        },
+        {
+          address: 'https://bitcanna-grpc.lavenderfive.com:443/',
+          provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'bitcanna.grpc.kjnodes.com:42090',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -2111,20 +2412,24 @@ const chains: Chain[] = [
           provider: 'bitcanna'
         },
         {
-          address: 'https://api-bitcanna-ia.cosmosia.notional.ventures/',
-          provider: 'Notional'
+          address: 'https://bitcanna-api.panthea.eu',
+          provider: 'Panthea EU'
         },
         {
-          address: 'https://bitcanna-api.polkachu.com',
-          provider: 'Polkachu'
+          address: 'https://api.bitcanna.sgtstake.com/',
+          provider: 'SGTstake'
         },
         {
-          address: 'https://bitcanna-api.lavenderfive.com/',
-          provider: 'Lavender.Five Nodes 🐝'
+          address: 'https://lcd-bitcanna.mintthemoon.xyz',
+          provider: 'mintthemoon'
         },
         {
           address: 'https://bcna-api.ibs.team/',
           provider: 'Inter Blockchain Services'
+        },
+        {
+          address: 'https://bitcanna.api.m.anode.team',
+          provider: 'AlxVoy'
         },
         {
           address: 'https://bitcanna.nodejumper.io:1317',
@@ -2133,28 +2438,22 @@ const chains: Chain[] = [
         {
           address: 'https://api-bcna.kjinc.io/',
           provider: 'KJINC.io'
-        }
-      ],
-      grpc: [
-        {
-          address: 'grpc.bitcanna.io:443',
-          provider: 'bitcanna'
         },
         {
-          address: 'grpc-bitcanna-ia.cosmosia.notional.ventures:443',
-          provider: 'Notional'
+          address: 'https://mainnet-bitcanna-api.konsortech.xyz',
+          provider: 'KonsorTech'
         },
         {
-          address: 'bitcanna-grpc.polkachu.com:13090',
-          provider: 'Polkachu'
+          address: 'https://bitcanna.api.kjnodes.com',
+          provider: 'kjnodes'
         },
         {
-          address: 'bitcanna-grpc.lavenderfive.com:443',
+          address: 'http://bitcanna.alkia.net:1317/',
+          provider: 'ALKIA'
+        },
+        {
+          address: 'https://bitcanna-api.lavenderfive.com/',
           provider: 'Lavender.Five Nodes 🐝'
-        },
-        {
-          address: 'bitcanna.nodejumper.io:9090',
-          provider: 'NODEJUMPER'
         }
       ]
     },
@@ -2209,7 +2508,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/bitsongofficial/networks/master/bitsong-2b/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.14.0',
+          recommended_version: 'v0.14.0',
+          compatible_versions: ['v0.14.0']
+        }
+      ]
     },
     fees: {
       fee_tokens: [
@@ -2426,10 +2732,25 @@ const chains: Chain[] = [
       recommended_version: 'v2.0',
       compatible_versions: ['v2.0'],
       cosmos_sdk_version: '0.44.3',
-      tendermint_version: '0.34.14',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.14'
+      },
       genesis: {
         genesis_url: 'https://a.client.sentry.net.bluzelle.com:26657/genesis'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0',
+          recommended_version: 'v2.0',
+          compatible_versions: ['v2.0'],
+          cosmos_sdk_version: '0.44.3',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34.14'
+          }
+        }
+      ]
     },
     logo_URIs: {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bluzelle/images/bluzelle.png',
@@ -2607,7 +2928,21 @@ const chains: Chain[] = [
         genesis_url:
           'https://cloudflare-ipfs.com/ipfs/QmYubyVNfghD4xCrTFj26zBwrF9s5GJhi1TmxvrwmJCipr'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v0.3.0',
+          recommended_version: 'v0.3.0',
+          compatible_versions: ['v0.3.0'],
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cybercongress/go-cyber/releases/download/v0.2.0/cyber_v0.2.0_linux-amd64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/cybercongress/go-cyber/releases/download/v0.2.0/cyber_v0.2.0_darwin-amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -2710,7 +3045,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Canto-Network/Canto/genesis/Networks/Mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v5.0.0',
+          recommended_version: 'v5.0.0',
+          compatible_versions: ['v5.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -2882,6 +3224,7 @@ const chains: Chain[] = [
     chain_id: 'carbon-1',
     bech32_prefix: 'swth',
     daemon_name: 'carbond',
+    website: 'https://www.switcheo.com/',
     node_home: '$HOME/.carbon',
     key_algos: ['secp256k1'],
     slip44: 118,
@@ -3145,7 +3488,27 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/Switcheo/carbon-bootstrap/raw/master/carbon-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.24.5',
+          recommended_version: 'v2.24.5',
+          compatible_versions: [
+            'v2.24.5',
+            'v2.24.4',
+            'v2.24.3',
+            'v2.24.2',
+            'v2.24.1',
+            'v2.24.0'
+          ],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.24.5/carbond2.24.5-mainnet.linux-amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.24.5/carbond2.24.5-mainnet.linux-arm64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -3213,6 +3576,11 @@ const chains: Chain[] = [
         kind: 'carbonscan',
         url: 'https://scan.carbon.network',
         tx_page: 'https://scan.carbon.network/transaction/${txHash}?net=main'
+      },
+      {
+        kind: 'ping.pub',
+        url: 'https://ping.pub/carbon',
+        tx_page: 'https://ping.pub/carbon/tx/${txHash}'
       }
     ]
   },
@@ -3234,7 +3602,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/cerberus-zone/cerberus_genesis/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v3.1.0',
+          recommended_version: 'v3.1.0',
+          compatible_versions: ['v3.1.0']
+        }
+      ]
     },
     fees: {
       fee_tokens: [
@@ -3366,7 +3741,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/chain4energy/c4e-chains/main/perun-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -3379,6 +3761,21 @@ const chains: Chain[] = [
           id: '86bd5cb6e762f673f1706e5889e039d5406b4b90',
           address: 'c4e.seed.node75.org:10156',
           provider: 'Pro-nodes75'
+        },
+        {
+          id: '54ca81dd509cc6160de7f4b479a96b341d8e830e',
+          address: 'rpc.c4e.nodexcapital.com:13956',
+          provider: 'NodeX Validator'
+        },
+        {
+          id: '8bbb3290fb691e52e9b304344a9dac5d0b9eff71',
+          address: 'rpc.c4e.hexnodes.co:09656',
+          provider: 'Hexnodes'
+        },
+        {
+          id: '9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152',
+          address: 'c4e.seed.mzonder.com:11256',
+          provider: 'MZONDER'
         }
       ],
       persistent_peers: [
@@ -3423,6 +3820,18 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-c4e.nodine.id',
           provider: 'Nodine.ID'
+        },
+        {
+          address: 'https://rpc.c4e.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://rpc.c4e.nodexcapital.com',
+          provider: 'NodeX Validator'
+        },
+        {
+          address: 'https://rpc-c4e.mzonder.com',
+          provider: 'MZONDER'
         }
       ],
       rest: [
@@ -3449,6 +3858,18 @@ const chains: Chain[] = [
         {
           address: 'https://api-c4e.nodine.id',
           provider: 'Nodine.ID'
+        },
+        {
+          address: 'https://lcd.c4e.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://rest.c4e.nodexcapital.com',
+          provider: 'NodeX Validator'
+        },
+        {
+          address: 'https://api-c4e.mzonder.com',
+          provider: 'MZONDER'
         }
       ],
       grpc: [
@@ -3467,6 +3888,18 @@ const chains: Chain[] = [
         {
           address: 'https://grpc-c4e.nodine.id',
           provider: 'Nodine.ID'
+        },
+        {
+          address: 'https://grpc.c4e.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://grpc.c4e.nodexcapital.com:443',
+          provider: 'NodeX Validator'
+        },
+        {
+          address: 'grpc-c4e.mzonder.com:443',
+          provider: 'MZONDER'
         }
       ]
     },
@@ -3502,6 +3935,11 @@ const chains: Chain[] = [
         url: 'https://explorer.bccnodes.com/chain4energy',
         tx_page:
           'https://explorer.bccnodes.com/chain4energy/transactions/${txHash}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/c4e',
+        tx_page: 'https://explorer.nodexcapital.com/c4e/transactions/${txHash}'
       }
     ]
   },
@@ -3537,20 +3975,49 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/cheqd/cheqd-node',
-      recommended_version: 'v1.2.2',
-      compatible_versions: ['v1.2.2', 'v1.2.4'],
+      recommended_version: 'v1.4.0',
+      compatible_versions: ['v1.2.5', 'v1.3.0', 'v1.4.0'],
       binaries: {
         'linux/amd64':
-          'https://github.com/cheqd/cheqd-node/releases/download/v1.2.2/cheqd-noded-1.2.2-Linux-x86_64.tar.gz',
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-amd64.tar.gz',
         'linux/arm64':
-          'https://github.com/cheqd/cheqd-node/releases/download/v1.2.2/cheqd-noded-1.2.2-Linux-arm64.tar.gz'
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-arm64.tar.gz',
+        'darwin/amd64':
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-amd64.tar.gz',
+        'darwin/arm64':
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-arm64.tar.gz'
       },
-      cosmos_sdk_version: '0.46.8',
-      tendermint_version: '0.34.24',
+      cosmos_sdk_version: '0.46.10',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.26'
+      },
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/cheqd/cheqd-node/main/networks/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.4.0',
+          recommended_version: 'v1.4.0',
+          compatible_versions: ['v1.2.5', 'v1.3.0', 'v1.4.0'],
+          cosmos_sdk_version: '0.46.10',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34.26'
+          },
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-arm64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -3739,7 +4206,15 @@ const chains: Chain[] = [
         genesis_url:
           'https://raw.githubusercontent.com/ChihuahuaChain/chihuahua/main/mainnet/genesis.json'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v4.2.1',
+          recommended_version: 'v4.2.1',
+          compatible_versions: ['v4.2.1'],
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -3956,7 +4431,14 @@ const chains: Chain[] = [
       compatible_versions: ['v1.0.0'],
       genesis: {
         genesis_url: 'https://rpc.mainnet.chimbablockchain.io/genesis'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       persistent_peers: []
@@ -4015,7 +4497,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/ChronicNetwork/net/main/mainnet/v1.1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.0',
+          recommended_version: 'v1.1.0',
+          compatible_versions: ['v1.1.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/ChronicNetwork/cht/releases/download/v.1.1.0/cht'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -4079,13 +4572,28 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/comdex-official/comdex',
-      recommended_version: 'v9.0.0',
-      compatible_versions: ['v9.0.0'],
+      recommended_version: 'v10.0.0',
+      compatible_versions: ['v10.0.0'],
+      cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://comdex-mainnet-genesis.s3.ap-southeast-1.amazonaws.com/genesis.json'
       },
-      cosmwasm_enabled: true
+      versions: [
+        {
+          name: 'v9.0.0',
+          recommended_version: 'v9.0.0',
+          compatible_versions: ['v9.0.0'],
+          cosmwasm_enabled: true,
+          next_version_name: 'v10.0.0'
+        },
+        {
+          name: 'v10.0.0',
+          recommended_version: 'v10.0.0',
+          compatible_versions: ['v10.0.0'],
+          cosmwasm_enabled: true
+        }
+      ]
     },
     daemon_name: 'comdex',
     node_home: '$HOME/.comdex',
@@ -4293,7 +4801,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/commercionetwork/chains/master/commercio-3/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v4.0.0',
+          recommended_version: 'v4.0.0',
+          compatible_versions: ['v4.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -4391,7 +4906,10 @@ const chains: Chain[] = [
           'https://github.com/CoreumFoundation/coreum/releases/download/v1.0.0/cored-linux-arm64?checksum=sha256:3ced97f06607f0cdaf77e7ff0b36b2011d101c660684e4f3e54c2ac6bf344dd6'
       },
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       genesis: {
@@ -4403,7 +4921,22 @@ const chains: Chain[] = [
         {
           name: 'v1',
           tag: 'v1.0.0',
-          height: 0
+          height: 0,
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64':
+              'https://github.com/CoreumFoundation/coreum/releases/download/v1.0.0/cored-linux-amd64?checksum=sha256:34098ad7586bda364b1b2e7c4569cbcefb630cd4ed7c8f68eb5bced834082c57',
+            'linux/arm64':
+              'https://github.com/CoreumFoundation/coreum/releases/download/v1.0.0/cored-linux-arm64?checksum=sha256:3ced97f06607f0cdaf77e7ff0b36b2011d101c660684e4f3e54c2ac6bf344dd6'
+          }
         }
       ]
     },
@@ -4429,6 +4962,11 @@ const chains: Chain[] = [
           id: 'cba16f4f32707d70a2a2d10861fac897f1e9aaa1',
           address: 'seed-nickle.mainnet-1.coreum.dev:26656',
           provider: 'Coreum Foundation'
+        },
+        {
+          id: '67ecf3e890b2f77b13fc872c8f11f868c283be6e',
+          address: 'rpc.coreum.nodexcapital.com:14156',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -4453,6 +4991,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-coreum.ecostake.com',
           provider: 'ecostake'
+        },
+        {
+          address: 'https://rpc.coreum.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       grpc: [
@@ -4471,12 +5013,20 @@ const chains: Chain[] = [
         {
           address: 'https://full-node-uranium.mainnet-1.coreum.dev:9090',
           provider: 'Coreum Foundation'
+        },
+        {
+          address: 'https://grpc.coreum.nodexcapital.com:444',
+          provider: 'NodeX Validator'
         }
       ],
       rest: [
         {
           address: 'https://rest-coreum.ecostake.com',
           provider: 'ecostake'
+        },
+        {
+          address: 'https://rest.coreum.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -4493,6 +5043,13 @@ const chains: Chain[] = [
         url: 'https://www.mintscan.io/coreum',
         tx_page: 'https://www.mintscan.io/coreum/txs/${txHash}',
         account_page: 'https://www.mintscan.io/coreum/account/${accountAddress}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/coreum',
+        tx_page: 'https://explorer.nodexcapital.com/coreum/txs/${txHash}',
+        account_page:
+          'https://explorer.nodexcapital.com/coreum/account/${accountAddress}'
       }
     ],
     keywords: ['dex', 'staking', 'wasm', 'assets', 'nft']
@@ -4530,24 +5087,43 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/cosmos/gaia',
-      recommended_version: 'v9.0.1',
-      compatible_versions: ['v9.0.0', 'v9.0.1'],
+      recommended_version: 'v9.0.2',
+      compatible_versions: ['v9.0.0', 'v9.0.1', 'v9.0.2'],
       binaries: {
         'linux/amd64':
-          'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-linux-amd64',
+          'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-linux-amd64',
         'linux/arm64':
-          'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-linux-arm64',
+          'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-linux-arm64',
         'darwin/amd64':
-          'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-darwin-amd64',
+          'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-darwin-amd64',
         'darwin/arm64':
-          'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-darwin-arm64',
+          'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-darwin-arm64',
         'windows/amd64':
-          'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-windows-amd64.exe'
+          'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-windows-amd64.exe'
       },
       genesis: {
         genesis_url:
           'https://github.com/cosmos/mainnet/raw/master/genesis/genesis.cosmoshub-4.json.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v9.0',
+          recommended_version: 'v9.0.2',
+          compatible_versions: ['v9.0.0', 'v9.0.1', 'v9.0.2'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-linux-amd64',
+            'linux/arm64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-linux-arm64',
+            'darwin/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-darwin-amd64',
+            'darwin/arm64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-darwin-arm64',
+            'windows/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.2/gaiad-v9.0.2-windows-amd64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -4680,6 +5256,10 @@ const chains: Chain[] = [
         {
           address: 'https://cosmos-rpc.easy2stake.com/',
           provider: 'Easy 2 Stake'
+        },
+        {
+          address: 'https://rpc.cosmos.nodestake.top',
+          provider: 'NodeStake'
         }
       ],
       rest: [
@@ -4734,6 +5314,10 @@ const chains: Chain[] = [
         {
           address: 'https://cosmos-lcd.easy2stake.com',
           provider: 'Easy 2 Stake'
+        },
+        {
+          address: 'https://api.cosmos.nodestake.top',
+          provider: 'NodeStake'
         }
       ],
       grpc: [
@@ -4764,6 +5348,10 @@ const chains: Chain[] = [
         {
           address: 'cosmoshub.grpc.interchain.ivaldilabs.xyz:443',
           provider: 'ivaldilabs'
+        },
+        {
+          address: 'https://grpc.cosmos.nodestake.top',
+          provider: 'NodeStake'
         }
       ]
     },
@@ -4852,7 +5440,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/crescent-network/launch/raw/main/mainnet/crescent-1/genesis.json.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v4.0.0',
+          recommended_version: 'v4.0.0',
+          compatible_versions: ['v4.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/crescent-network/crescent/releases/download/v2.1.0/crescentd-v2.1.0-linux-amd64',
+            'darwin/amd64':
+              'https://github.com/crescent-network/crescent/releases/download/v2.1.0/crescentd-v2.1.0-darwin-amd64'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5016,7 +5617,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/crypto-org-chain/cronos-mainnet/master/cronosmainnet_25-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.4',
+          recommended_version: 'v1.0.4',
+          compatible_versions: ['v1.0.2', 'v1.0.3', 'v1.0.4'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_x86_64.tar.gz',
+            'linux/arm64':
+              'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_x86_64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Windows_x86_64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5151,7 +5771,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/crypto-org-chain/mainnet/raw/main/crypto-org-chain-mainnet-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v4.2.2',
+          recommended_version: 'v4.2.2',
+          compatible_versions: ['v4.2.2'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_x86_64.tar.gz',
+            'linux/arm64':
+              'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_x86_64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Windows_x86_64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5344,6 +5983,7 @@ const chains: Chain[] = [
     chain_id: 'cudos-1',
     bech32_prefix: 'cudos',
     daemon_name: 'cudos-noded',
+    website: 'https://www.cudos.org/',
     node_home: '$HOME/cudos-data',
     key_algos: ['secp256k1'],
     slip44: 118,
@@ -5371,7 +6011,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/CudoVentures/cudos-builders/v1.0.0/docker/config/genesis.mainnet.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.0',
+          recommended_version: 'v1.1.0',
+          compatible_versions: ['v1.0.1', 'v1.1.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5389,6 +6036,11 @@ const chains: Chain[] = [
           id: 'e0f3bcc574ef66ae4561fad0772a4fd1959969af',
           address: 'cluster-3-seed-1.hosts.cudos.org:26656',
           provider: 'cudo'
+        },
+        {
+          id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+          address: 'cudos-mainnet-seed.autostake.com:27256',
+          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ],
       persistent_peers: [
@@ -5416,6 +6068,11 @@ const chains: Chain[] = [
           id: 'eb14f9142ad313297653f84754b1caf60efe75ac',
           address: 'mainnet-full-node-02.hosts.cudos.org:26656',
           provider: 'cudo'
+        },
+        {
+          id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+          address: 'cudos-mainnet-peer.autostake.com:27256',
+          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ]
     },
@@ -5428,6 +6085,14 @@ const chains: Chain[] = [
         {
           address: 'https://mainnet-full-node-02.hosts.cudos.org:36657',
           provider: 'cudo'
+        },
+        {
+          address: 'https://cudos-rpc.kleomedes.network',
+          provider: 'Kleomedes'
+        },
+        {
+          address: 'https://cudos-mainnet-rpc.autostake.com:443',
+          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ],
       rest: [
@@ -5438,12 +6103,24 @@ const chains: Chain[] = [
         {
           address: 'https://mainnet-full-node-02.hosts.cudos.org:31317',
           provider: 'cudo'
+        },
+        {
+          address: 'https://cudos-api.kleomedes.network',
+          provider: 'Kleomedes'
+        },
+        {
+          address: 'https://cudos-mainnet-lcd.autostake.com:443',
+          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ],
       grpc: [
         {
           address: 'mainnet-full-node-01.hosts.cudos.org:9090',
           provider: 'cudo'
+        },
+        {
+          address: 'cudos-mainnet-grpc.autostake.com:443',
+          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ]
     },
@@ -5507,7 +6184,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Decentr-net/mainnets/master/3.0/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.5.7',
+          recommended_version: 'v1.5.7',
+          compatible_versions: ['v1.5.7']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5565,6 +6249,11 @@ const chains: Chain[] = [
           id: '3fb96f1619340507e7f28fd7c4b81f4cd3d9a7e7',
           address: 'seeds-decentr.sxlzptprjkt.xyz:31656',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          id: '89f32d5e096eadddb1b3e6e839963503ef4d2d70',
+          address: 'rpc.decentr.nodexcapital.com:10856',
+          provider: 'NodeX Validator'
         }
       ],
       persistent_peers: [
@@ -5577,6 +6266,11 @@ const chains: Chain[] = [
           id: 'a6ebaed2c7972941b5cce5d94ec94a1352a600a4',
           address: 'peers-decentr.sxlzptprjkt.xyz:31656',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          id: '05f4788f936aa0158eeb935d8857cc9d23e6683d',
+          address: '65.109.28.226:12656',
+          provider: 'Hexnodes'
         }
       ]
     },
@@ -5605,6 +6299,14 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-decentr.sxlzptprjkt.xyz',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://rpc.decentr.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://rpc.decentr.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       rest: [
@@ -5627,12 +6329,28 @@ const chains: Chain[] = [
         {
           address: 'https://api-decentr.sxlzptprjkt.xyz',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://lcd.decentr.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://rest.decentr.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       grpc: [
         {
           address: 'https://grpc-decentr.sxlzptprjkt.xyz:443',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://grpc.decentr.hexnodes.co',
+          provider: 'Hexnodes'
+        },
+        {
+          address: 'https://grpc.decentr.nodexcapital.com:443',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -5662,6 +6380,16 @@ const chains: Chain[] = [
         kind: 'THE EXPLORER',
         url: 'https://explorer.sxlzptprjkt.xyz/decentr',
         tx_page: 'https://explorer.sxlzptprjkt.xyz/decentr/tx/${txHash}'
+      },
+      {
+        kind: 'hexskrt EXPLORER',
+        url: 'https://explorer.hexskrt.net/decentr',
+        tx_page: 'https://explorer.hexskrt.net/decentr/tx/${txHash}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/decentr',
+        tx_page: 'https://explorer.nodexcapital.com/decentr/tx/${txHash}'
       }
     ]
   },
@@ -5713,7 +6441,24 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v4.7.0',
+          recommended_version: 'v4.7.0',
+          compatible_versions: ['v4.7.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/desmos-labs/desmos/releases/download/v4.7.0/desmos-4.7.0-linux-amd64',
+            'linux/arm64':
+              'https://github.com/desmos-labs/desmos/releases/download/v4.7.0/desmos-4.7.0-linux-arm64',
+            'darwin/amd64':
+              'https://github.com/desmos-labs/desmos/releases/download/v4.7.0/desmos-4.7.0-darwin-amd64',
+            'windows/amd64':
+              'https://github.com/desmos-labs/desmos/releases/download/v4.7.0/desmos-4.7.0-windows-amd64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -5894,7 +6639,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/notional-labs/dig/master/networks/mainnets/dig-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -5985,7 +6737,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://gitlab.com/dysonproject/dyson-deploy/-/raw/develop/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.0.2-bebf2e98',
+          recommended_version: 'v0.0.2-bebf2e98',
+          compatible_versions: ['v0.0.2-bebf2e98']
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -6088,7 +6847,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://gist.githubusercontent.com/echelonfoundation/ee862f58850fc1b5ee6a6fdccc3130d2/raw/55c2c4ea2fee8a9391d0dc55b2c272adb804054a/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.4',
+          recommended_version: 'v1.1.4',
+          compatible_versions: ['v1.1.4', 'v1.0.3'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/echelonfoundation/echelon/releases/download/v1.1.4/echelon_1.1.4_Linux_x86_64.tar.gz',
+            'linux/arm64':
+              'https://github.com/echelonfoundation/echelon/releases/download/v1.1.4/echelon_1.1.4_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/echelonfoundation/echelon/releases/download/v1.1.4/echelon_1.1.4_Darwin_x86_64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/echelonfoundation/echelon/releases/download/v1.1.4/echelon_1.1.4_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/echelonfoundation/echelon/releases/download/v1.1.4/echelon_1.1.4_Windows_x86_64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -6245,7 +7023,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/e-money/networks/master/emoney-3/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.3',
+          recommended_version: 'v1.1.3',
+          compatible_versions: ['v1.1.3']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -6473,26 +7258,54 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/evmos/evmos',
-      recommended_version: 'v11.0.2',
-      compatible_versions: ['v11.0.0', 'v11.0.1', 'v11.0.2'],
+      recommended_version: 'v12.1.0',
+      compatible_versions: ['v12.1.0'],
       binaries: {
         'linux/amd64':
-          'https://github.com/evmos/evmos/releases/download/v11.0.2/evmos_11.0.2_Linux_amd64.tar.gz',
+          'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Linux_amd64.tar.gz',
         'linux/arm64':
-          'https://github.com/evmos/evmos/releases/download/v11.0.2/evmos_11.0.2_Linux_arm64.tar.gz',
+          'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Linux_arm64.tar.gz',
         'darwin/amd64':
-          'https://github.com/evmos/evmos/releases/download/v11.0.2/evmos_11.0.2_Darwin_amd64.tar.gz',
+          'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Darwin_amd64.tar.gz',
         'darwin/arm64':
-          'https://github.com/evmos/evmos/releases/download/v11.0.2/evmos_11.0.2_Darwin_arm64.tar.gz',
+          'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Darwin_arm64.tar.gz',
         'windows/amd64':
-          'https://github.com/evmos/evmos/releases/download/v11.0.2/evmos_11.0.2_Windows_amd64.zip'
+          'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Windows_amd64.zip'
       },
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: '6.1.0',
       genesis: {
         genesis_url: 'https://archive.evmos.org/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v12.1.0',
+          recommended_version: 'v12.1.0',
+          compatible_versions: ['v12.1.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: '6.1.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Linux_amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Darwin_amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/evmos/evmos/releases/download/v12.1.0/evmos_12.1.0_Windows_amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -6578,7 +7391,7 @@ const chains: Chain[] = [
     apis: {
       rpc: [
         {
-          address: 'https://rpc.evmos.kingnodes.com',
+          address: 'https://evmos.kingnodes.com',
           provider: 'kingnodes'
         },
         {
@@ -6664,7 +7477,7 @@ const chains: Chain[] = [
       ],
       rest: [
         {
-          address: 'https://api.evmos.kingnodes.com',
+          address: 'https://evmos.kingnodes.com',
           provider: 'kingnodes'
         },
         {
@@ -6738,7 +7551,7 @@ const chains: Chain[] = [
       ],
       grpc: [
         {
-          address: 'grpc.evmos.kingnodes.com:443',
+          address: 'grpc-evmos.kingnodes.com:443',
           provider: 'kingnodes'
         },
         {
@@ -6906,7 +7719,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/fetchai/genesis-fetchhub/fetchhub-4/fetchhub-4/data/genesis_migrated_5300200.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.10.5',
+          recommended_version: 'v0.10.5',
+          compatible_versions: ['v0.10.5']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -7100,6 +7920,14 @@ const chains: Chain[] = [
         kind: 'bigdipper',
         url: 'https://fetch-explorer.teasel.org',
         tx_page: 'https://fetch-explorer.teasel.org/transactions/${txHash}'
+      },
+      {
+        kind: 'azoyalabs',
+        url: 'https://fetchstation.azoyalabs.com/mainnet',
+        tx_page:
+          'https://fetchstation.azoyalabs.com/mainnet/explorer/transactions/${txHash}',
+        account_page:
+          'https://fetchstation.azoyalabs.com/mainnet/explorer/address/${accountAddress}'
       }
     ]
   },
@@ -7113,6 +7941,9 @@ const chains: Chain[] = [
     chain_id: 'colosseum-1',
     bech32_prefix: 'firma',
     slip44: 7777777,
+    daemon_name: 'firmachaind',
+    node_home: '$HOME/.firmachain',
+    key_algos: ['secp256k1'],
     fees: {
       fee_tokens: [
         {
@@ -7123,16 +7954,20 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/firmachain/firmachain',
-      recommended_version: 'v0.3.3',
-      compatible_versions: ['v0.3.3'],
+      recommended_version: '0.3.5-patch',
+      compatible_versions: ['0.3.5-patch'],
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/FirmaChain/mainnet/main/colosseum-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: '0.3.5-patch',
+          recommended_version: '0.3.5-patch',
+          compatible_versions: ['0.3.5-patch']
+        }
+      ]
     },
-    daemon_name: 'firmachaind',
-    node_home: '$HOME/.firmachain',
-    key_algos: ['secp256k1'],
     peers: {
       seeds: [
         {
@@ -7154,6 +7989,11 @@ const chains: Chain[] = [
           id: '20e1000e88125698264454a884812746c2eb4807',
           address: 'seeds.lavenderfive.com:16456',
           provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          id: '931a7c680d28c84a8a53e4017a6eae0788ee7cf2',
+          address: 'firmachain-seed.ramuchi.tech:57656',
+          provider: 'ramuchi.tech'
         }
       ]
     },
@@ -7170,6 +8010,10 @@ const chains: Chain[] = [
         {
           address: 'https://firmachain-rpc.lavenderfive.com/',
           provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://firmachain-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       rest: [
@@ -7184,12 +8028,20 @@ const chains: Chain[] = [
         {
           address: 'https://firmachain-api.lavenderfive.com/',
           provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://firmachain-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       grpc: [
         {
           address: 'firmachain-grpc.lavenderfive.com:443',
           provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://firmachain-grpc.ramuchi.tech:1390',
+          provider: 'ramuchi.tech'
         }
       ]
     },
@@ -7255,7 +8107,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/OrbisWorlds/networks/raw/main/galaxy-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/galaxies-labs/galaxy/releases/download/v1.0.0/galaxy_v1.0.0_linux_amd64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/galaxies-labs/galaxy/releases/download/v1.0.0/galaxy_v1.0.0_darwin_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -7320,7 +8185,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/alpha-omega-labs/genesisd/raw/neolithic/genesis_29-1-state/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.3.0',
+          recommended_version: 'v0.3.0',
+          compatible_versions: ['v0.3.0']
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -7427,7 +8299,24 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Gravity-Bridge/Gravity-Docs/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.8.0',
+          recommended_version: 'v1.8.0',
+          compatible_versions: ['v1.8.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.0/gravity-linux-amd64',
+            'linux/arm64':
+              'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.0/gravity-linux-arm64',
+            'darwin/amd64':
+              'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.0/gravity-darwin-amd64',
+            'windows/amd64':
+              'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.0/gravity-windows-amd64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -7455,6 +8344,16 @@ const chains: Chain[] = [
           id: '86bd5cb6e762f673f1706e5889e039d5406b4b90',
           address: 'gravity.seed.node75.org:10556',
           provider: 'Pro-Nodes'
+        },
+        {
+          id: 'b9180ddd3329ddaea74fe6fbdc729506b90f313b',
+          address: 'gravity-seed.ramuchi.tech:36656',
+          provider: 'ramuchi.tech'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'gravitybridge.rpc.kjnodes.com:26659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: []
@@ -7488,6 +8387,14 @@ const chains: Chain[] = [
         {
           address: 'https://gravity-rpc.ibs.team',
           provider: 'Inter Blockchain Services'
+        },
+        {
+          address: 'https://gravity-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'https://gravitybridge.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -7514,6 +8421,14 @@ const chains: Chain[] = [
         {
           address: 'https://gravity-api.ibs.team',
           provider: 'Inter Blockchain Services'
+        },
+        {
+          address: 'https://gravity-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'https://gravitybridge.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -7532,6 +8447,14 @@ const chains: Chain[] = [
         {
           address: 'gravitybridge-grpc.lavenderfive.com:443',
           provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://gravity-grpc.ramuchi.tech:10090',
+          provider: 'ramuchi.tech'
+        },
+        {
+          address: 'gravitybridge.grpc.kjnodes.com:26090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -7604,7 +8527,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/IDEP-network/Antora/raw/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/IDEP-network/Antora/raw/main/iond'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -7704,7 +8638,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/ixofoundation/genesis/blob/bc042e1223d551b22d55c155de06e662ca24d2f2/ixo-5/genesis.json.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.20.0',
+          recommended_version: 'v0.20.0',
+          compatible_versions: ['v0.20.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -7854,7 +8795,18 @@ const chains: Chain[] = [
       },
       genesis: {
         genesis_url: 'https://static.imversed.com/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v3.11',
+          recommended_version: 'v3.11',
+          compatible_versions: ['v3.11'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/imversed/imversed/releases/download/v3.11/imversed_3.11_Linux_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -7948,7 +8900,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.10',
+          recommended_version: 'v1.10',
+          compatible_versions: ['v1.10'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.10.0-1679065799/linux-amd64.zip',
+            'darwin/amd64':
+              'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.10.0-1679065799/darwin-amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -8201,12 +9166,25 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/irisnet/irishub',
-      recommended_version: 'v1.3.0',
-      compatible_versions: ['v1.3.0'],
+      recommended_version: 'v1.4.1',
+      compatible_versions: ['v1.4.1'],
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/irisnet/mainnet/master/config/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.3.0',
+          next_version_name: 'v1.4.1',
+          recommended_version: 'v1.3.0',
+          compatible_versions: ['v1.3.0']
+        },
+        {
+          name: 'v1.4.1',
+          recommended_version: 'v1.4.1',
+          compatible_versions: ['v1.4.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -8304,9 +9282,9 @@ const chains: Chain[] = [
         {
           denom: 'ujkl',
           fixed_min_gas_price: 0,
-          low_gas_price: 0.01,
-          average_gas_price: 0.025,
-          high_gas_price: 0.03
+          low_gas_price: 0.002,
+          average_gas_price: 0.002,
+          high_gas_price: 0.02
         }
       ]
     },
@@ -8331,7 +9309,21 @@ const chains: Chain[] = [
         genesis_url:
           'https://cdn.discordapp.com/attachments/1002389406650466405/1034968352591986859/updated_genesis2.json'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v1.2.1',
+          recommended_version: 'v1.2.1',
+          compatible_versions: ['v1.2.1'],
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64':
+              'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.1/canined-Linux',
+            'darwin/amd64':
+              'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.1/canined-macOS'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -8349,6 +9341,11 @@ const chains: Chain[] = [
           id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
           address: 'seeds.polkachu.com:17556',
           provider: 'Polkachu'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'jackal.rpc.kjnodes.com:37659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -8434,6 +9431,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-jackal.carbonZERO.zone:443',
           provider: 'carbonZERO🌲'
+        },
+        {
+          address: 'https://jackal.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -8488,6 +9489,10 @@ const chains: Chain[] = [
         {
           address: 'https://lcd-jackal.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://jackal.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -8514,6 +9519,10 @@ const chains: Chain[] = [
         {
           address: 'jackal.nodejumper.io:9090',
           provider: 'NODEJUMPER'
+        },
+        {
+          address: 'jackal.grpc.kjnodes.com:37090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -8576,12 +9585,29 @@ const chains: Chain[] = [
       recommended_version: 'v13.0.0',
       compatible_versions: ['v13.0.0'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url: 'https://download.dimi.sh/juno-phoenix2-genesis.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v13.0.0',
+          recommended_version: 'v13.0.0',
+          compatible_versions: ['v13.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -8706,7 +9732,7 @@ const chains: Chain[] = [
           provider: 'BlockHunters 🎯'
         },
         {
-          address: 'https://rpc.juno.kingnodes.com',
+          address: 'https://juno.kingnodes.com',
           provider: 'kingnodes 👑'
         },
         {
@@ -8736,6 +9762,10 @@ const chains: Chain[] = [
         {
           address: 'https://juno-rpc.cosmosrescue.com',
           provider: 'cosmosrescue'
+        },
+        {
+          address: 'http://167.235.211.168:26657',
+          provider: 'CommunityStaking'
         }
       ],
       rest: [
@@ -8784,7 +9814,7 @@ const chains: Chain[] = [
           provider: 'BlockHunters 🎯'
         },
         {
-          address: 'https://api.juno.kingnodes.com',
+          address: 'https://juno.kingnodes.com',
           provider: 'kingnodes 👑'
         },
         {
@@ -8810,6 +9840,10 @@ const chains: Chain[] = [
         {
           address: 'https://juno-api.cosmosrescue.com',
           provider: 'cosmosrescue'
+        },
+        {
+          address: 'http://167.235.211.168:1317',
+          provider: 'CommunityStaking'
         }
       ],
       grpc: [
@@ -8830,7 +9864,7 @@ const chains: Chain[] = [
           provider: 'Stakin'
         },
         {
-          address: 'grpc.juno.kingnodes.com:443',
+          address: 'grpc-juno.kingnodes.com:443',
           provider: 'kingnodes 👑'
         },
         {
@@ -8852,6 +9886,10 @@ const chains: Chain[] = [
         {
           address: 'juno-grpc.cosmosrescue.com:9090',
           provider: 'cosmosrescue'
+        },
+        {
+          address: 'http://167.235.211.168:9091',
+          provider: 'CommunityStaking'
         }
       ]
     },
@@ -8927,7 +9965,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://kava-genesis-files.s3.us-east-1.amazonaws.com/kava_2222-10/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.21.0',
+          recommended_version: 'v0.21.0',
+          compatible_versions: ['v0.21.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -8971,6 +10016,10 @@ const chains: Chain[] = [
         {
           address: 'https://kava-mainnet-rpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://kava-rpc.ibs.team',
+          provider: 'Inter Blockchain Services'
         }
       ],
       rest: [
@@ -8989,6 +10038,10 @@ const chains: Chain[] = [
         {
           address: 'https://kava-mainnet-lcd.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://kava-api.ibs.team',
+          provider: 'Inter Blockchain Services'
         }
       ],
       grpc: [
@@ -9066,7 +10119,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/KiFoundation/ki-networks/v0.1/Mainnet/kichain-2/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: '5.0.0',
+          recommended_version: '5.0.0',
+          compatible_versions: ['5.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -9217,7 +10277,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Konstellation/konstellation/master/config/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.6.2',
+          recommended_version: 'v0.6.2',
+          compatible_versions: ['v0.6.2']
+        }
+      ]
     },
     fees: {
       fee_tokens: [
@@ -9331,6 +10398,11 @@ const chains: Chain[] = [
         tx_page: 'https://www.mintscan.io/konstellation/txs/${txHash}',
         account_page:
           'https://www.mintscan.io/konstellation/account/${accountAddress}'
+      },
+      {
+        kind: 'cosmotracker',
+        url: 'https://cosmotracker.com/konstellation',
+        tx_page: 'https://cosmotracker.com/konstellation/tx/${txHash}'
       }
     ],
     slip44: 118
@@ -9373,7 +10445,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/Team-Kujira/networks/raw/master/mainnet/kaiyo-1.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.8.4-mainnet',
+          recommended_version: 'v0.8.4-mainnet',
+          compatible_versions: ['v0.8.4-mainnet']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -9391,6 +10470,11 @@ const chains: Chain[] = [
           id: '322abfd7c0bcdf8a3d98ccb46ae2572bae0e8301',
           address: 'seed-kujira.starsquid.io:15602',
           provider: 'Starsquid'
+        },
+        {
+          id: '824fa337b806bd48ce9505d74ba3e5adea80da93',
+          address: 'seeds.goldenratiostaking.net:1628',
+          provider: 'Golden Ratio Staking'
         },
         {
           id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
@@ -9471,6 +10555,10 @@ const chains: Chain[] = [
           provider: 'Kleomedes'
         },
         {
+          address: 'https://rpc-kujira.goldenratiostaking.net',
+          provider: 'Golden Ratio Staking'
+        },
+        {
           address: 'https://rpc-kujira.huginn.tech',
           provider: 'Huginn'
         },
@@ -9487,6 +10575,10 @@ const chains: Chain[] = [
         {
           address: 'https://lcd-kujira.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://rest-kujira.goldenratiostaking.net',
+          provider: 'Golden Ratio Staking'
         },
         {
           address: 'https://lcd.kaiyo.kujira.setten.io',
@@ -9561,6 +10653,10 @@ const chains: Chain[] = [
         {
           address: 'kujira-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'kujira.grpc.kjnodes.com:13090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -9606,6 +10702,7 @@ const chains: Chain[] = [
     bech32_prefix: 'kyve',
     daemon_name: 'kyved',
     node_home: '$HOME/.kyve',
+    website: 'https://www.kyve.network/',
     key_algos: ['secp256k1'],
     slip44: 118,
     fees: {
@@ -9623,13 +10720,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/KYVENetwork/networks/main/kyve-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
         {
           id: '20e1000e88125698264454a884812746c2eb4807',
-          address: 'seeds.lavenderfive.com:11856',
+          address: 'seeds.lavenderfive.com:11056',
           provider: 'Lavender.Five Nodes 🐝'
         }
       ],
@@ -9797,7 +10901,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/LambdaIM/mainnet/main/lambda_92000-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -9903,11 +11014,38 @@ const chains: Chain[] = [
           'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Windows_x86_64.zip'
       },
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/likecoin/mainnet/982c14399089950a59d3ebbedcbbc7ead6040457/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v3.1.0',
+          recommended_version: 'v3.1.0',
+          compatible_versions: ['v3.1.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          binaries: {
+            'linux/amd64':
+              'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Linux_x86_64.tar.gz',
+            'linux/arm64':
+              'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Darwin_x86_64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/likecoin/likecoin-chain/releases/download/v3.1.0/likecoin-chain_3.1.0_Windows_x86_64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -10119,7 +11257,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/LoyalLabs/net/main/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.25.3',
+          recommended_version: 'v0.25.3',
+          compatible_versions: ['v0.25.3']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -10229,7 +11374,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/cryptonetD/lumenx/main/config/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.1.0',
+          recommended_version: 'v0.1.0',
+          compatible_versions: ['v0.1.0']
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -10319,6 +11471,11 @@ const chains: Chain[] = [
         tx_page: 'https://explorer.chaintools.tech/lumenx/tx/${txHash}'
       },
       {
+        kind: 'ping.pub',
+        url: 'https://explorer.cryptonet.pl/lumenx',
+        tx_page: 'https://explorer.cryptonet.pl/lumenx/tx/${txHash}'
+      },
+      {
         kind: 'Kynraze',
         url: 'https://explorer.kynraze.com/lumenx',
         tx_page: 'https://explorer.kynraze.com/lumenx/tx/${txHash}'
@@ -10373,7 +11530,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.3.1',
+          recommended_version: 'v1.3.1',
+          compatible_versions: ['v1.3.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -10532,7 +11696,10 @@ const chains: Chain[] = [
       recommended_version: 'v1.0.0',
       compatible_versions: ['v1.0.0'],
       cosmos_sdk_version: '0.46.7',
-      tendermint_version: '0.34.24',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.24'
+      },
       cosmwasm_version: '0.30.0',
       cosmwasm_enabled: true,
       ibc_go_version: '6.1.0',
@@ -10545,7 +11712,18 @@ const chains: Chain[] = [
         {
           name: 'v1',
           tag: 'v1.0.0',
-          height: 0
+          height: 0,
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: '0.46.7',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34.24'
+          },
+          cosmwasm_version: '0.30.0',
+          cosmwasm_enabled: true,
+          ibc_go_version: '6.1.0',
+          ics_enabled: ['ics20-1']
         }
       ]
     },
@@ -10575,6 +11753,11 @@ const chains: Chain[] = [
           id: 'e726816f42831689eab9378d5d577f1d06d25716',
           address: 'mars-seed-2.allnodes.me:26656',
           provider: 'Allnodes.com ⚡️ Nodes & Staking'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'mars.rpc.kjnodes.com:45659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -10616,7 +11799,7 @@ const chains: Chain[] = [
           provider: 'WhisperNode🤐'
         },
         {
-          address: 'https://rpc.mars.kingnodes.com:443',
+          address: 'https://mars.kingnodes.com:443',
           provider: 'Kingnodes'
         },
         {
@@ -10634,6 +11817,10 @@ const chains: Chain[] = [
         {
           address: 'https://mars-rpc.stakeandrelax.net',
           provider: 'Stake&Relax Validator 🦥'
+        },
+        {
+          address: 'https://mars.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -10662,7 +11849,7 @@ const chains: Chain[] = [
           provider: 'WhisperNode🤐'
         },
         {
-          address: 'https://api.mars.kingnodes.com:443',
+          address: 'https://mars.kingnodes.com:443',
           provider: 'Kingnodes'
         },
         {
@@ -10680,6 +11867,10 @@ const chains: Chain[] = [
         {
           address: 'https://mars-api.stakeandrelax.net',
           provider: 'Stake&Relax Validator 🦥'
+        },
+        {
+          address: 'https://mars.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -10700,12 +11891,16 @@ const chains: Chain[] = [
           provider: 'AutoStake 🛡️ Slash Protected'
         },
         {
-          address: 'grpc.mars.kingnodes.com:443',
+          address: 'grpc-mars.kingnodes.com:443',
           provider: 'Kingnodes'
         },
         {
           address: 'mars-grpc.genznodes.dev:9090',
           provider: 'genznodes'
+        },
+        {
+          address: 'mars.grpc.kjnodes.com:45090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -10792,7 +11987,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/oxygene76/medasdigital/tree/main/networks/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.94',
+          recommended_version: 'v0.94',
+          compatible_versions: ['v0.94']
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -10900,7 +12102,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/memecosmos/mainnet/raw/main/meme-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11044,7 +12253,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/microtick/stargate-genesis/master/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'mtm-v2.0.4',
+          recommended_version: 'mtm-v2.0.4',
+          compatible_versions: ['mtm-v2.0.4']
+        }
+      ]
     },
     explorers: [
       {
@@ -11086,18 +12302,39 @@ const chains: Chain[] = [
         }
       ]
     },
+    logo_URIs: {
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.png'
+    },
     codebase: {
       git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
-      recommended_version: 'v1.0.0',
-      compatible_versions: ['v1.0.0'],
+      recommended_version: 'v2.0.0',
+      compatible_versions: ['v2.0.0'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.28',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/main/networks/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0.0',
+          recommended_version: 'v2.0.0',
+          compatible_versions: ['v2.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.28',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11120,6 +12357,11 @@ const chains: Chain[] = [
           id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
           address: 'seeds.polkachu.com:20756',
           provider: 'Polkachu'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'migaloo.rpc.kjnodes.com:49659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -11159,6 +12401,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc.whitewhale.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://migaloo.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -11185,6 +12431,10 @@ const chains: Chain[] = [
         {
           address: 'https://api.whitewhale.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://migaloo.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -11203,6 +12453,10 @@ const chains: Chain[] = [
         {
           address: 'https://grpc.whitewhale.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'migaloo.grpc.kjnodes.com:49090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -11249,7 +12503,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/mises-id/mainnet/master/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.4',
+          recommended_version: 'v1.0.4',
+          compatible_versions: ['v1.0.4']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11373,6 +12634,428 @@ const chains: Chain[] = [
   },
   {
     $schema: '../chain.schema.json',
+    chain_name: 'noble',
+    chain_id: 'noble-1',
+    website: 'https://nobleassets.xyz/',
+    pretty_name: 'Noble',
+    status: 'live',
+    network_type: 'mainnet',
+    bech32_prefix: 'noble',
+    daemon_name: 'nobled',
+    node_home: '$HOME/.nobled',
+    key_algos: ['secp256k1'],
+    slip44: 118,
+    fees: {
+      fee_tokens: [
+        {
+          denom: 'uusdc',
+          fixed_min_gas_price: 0,
+          low_gas_price: 0.01,
+          average_gas_price: 0.025,
+          high_gas_price: 0.03
+        }
+      ]
+    },
+    staking: {
+      staking_tokens: [
+        {
+          denom: 'ustake'
+        }
+      ],
+      lock_duration: {
+        time: '1814400s'
+      }
+    },
+    codebase: {
+      git_repo: 'https://github.com/strangelove-ventures/noble',
+      recommended_version: 'v1.0.0',
+      compatible_versions: ['v1.0.0'],
+      cosmos_sdk_version: 'v0.45',
+      consensus: {
+        type: 'tendermint',
+        version: 'v0.34'
+      },
+      cosmwasm_enabled: false,
+      ibc_go_version: 'v3.4.0',
+      ics_enabled: ['ics20-1'],
+      genesis: {
+        name: 'v1.0.0',
+        genesis_url:
+          'https://github.com/strangelove-ventures/noble-networks/blob/main/mainnet/noble-1/genesis.json'
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          tag: 'v1.0.0',
+          height: 0,
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: 'v0.45',
+          consensus: {
+            type: 'tendermint',
+            version: 'v0.34'
+          },
+          cosmwasm_enabled: false,
+          ibc_go_version: 'v3.4.0',
+          ics_enabled: ['ics20-1'],
+          next_version_name: 'neon'
+        },
+        {
+          name: 'neon',
+          tag: 'v2.0.0',
+          height: 119000,
+          recommended_version: 'v2.0.0',
+          compatible_versions: ['v2.0.0'],
+          cosmos_sdk_version: 'v0.45',
+          consensus: {
+            type: 'tendermint',
+            version: 'v0.34'
+          },
+          cosmwasm_enabled: false,
+          ibc_go_version: 'v3.4.0',
+          ics_enabled: ['ics20-1']
+        }
+      ]
+    },
+    apis: {
+      rpc: [
+        {
+          address: 'https://noble-rpc.polkachu.com',
+          provider: 'polkachu'
+        }
+      ],
+      rest: [
+        {
+          address: 'https://noble-api.polkachu.com',
+          provider: 'polkachu'
+        }
+      ],
+      grpc: [
+        {
+          address: 'noble-grpc.polkachu.com:21590',
+          provider: 'polkachu'
+        }
+      ]
+    },
+    explorers: [
+      {
+        kind: 'mintscan',
+        url: 'https://www.mintscan.io/noble',
+        tx_page: 'https://www.mintscan.io/noble/txs/${txHash}',
+        account_page: 'https://www.mintscan.io/noble/account/${accountAddress}'
+      },
+      {
+        kind: 'ping.pub',
+        url: 'https://explore.strange.love/noble-1',
+        tx_page: 'https://explore.strange.love/noble-1/tx/${txHash}'
+      }
+    ]
+  },
+  {
+    $schema: '../chain.schema.json',
+    chain_name: 'nois',
+    status: 'live',
+    network_type: 'mainnet',
+    website: 'https://nois.network',
+    pretty_name: 'Nois',
+    chain_id: 'nois-1',
+    bech32_prefix: 'nois',
+    daemon_name: 'noisd',
+    node_home: '$HOME/.noisd',
+    key_algos: ['secp256k1'],
+    slip44: 118,
+    fees: {
+      fee_tokens: [
+        {
+          denom: 'unois',
+          fixed_min_gas_price: 0,
+          low_gas_price: 0.05,
+          average_gas_price: 0.05,
+          high_gas_price: 0.1
+        }
+      ]
+    },
+    staking: {
+      staking_tokens: [
+        {
+          denom: 'unois'
+        }
+      ],
+      lock_duration: {
+        time: '1814400s'
+      }
+    },
+    codebase: {
+      git_repo: 'https://github.com/noislabs/noisd',
+      recommended_version: 'v1.0.0',
+      compatible_versions: ['v1.0.0'],
+      cosmos_sdk_version: '0.45',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
+      cosmwasm_version: '0.30',
+      cosmwasm_enabled: true,
+      genesis: {
+        name: 'v1',
+        genesis_url:
+          'https://raw.githubusercontent.com/noislabs/networks/nois1.final.1/nois-1/genesis.json'
+      },
+      versions: [
+        {
+          name: 'v1',
+          tag: 'v1.0.0',
+          height: 0,
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true
+        }
+      ]
+    },
+    images: [
+      {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nois/images/nois.png',
+        theme: {
+          primary_color_hex: '#0C0914'
+        }
+      }
+    ],
+    logo_URIs: {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nois/images/nois.png'
+    },
+    peers: {
+      seeds: [
+        {
+          id: 'b3e3bd436ee34c39055a4c9946a02feec232988c',
+          address: 'seeds.cros-nest.com:56656',
+          provider: 'Cros-Nest'
+        },
+        {
+          id: 'babc3f3f7804933265ec9c40ad94f4da8e9e0017',
+          address: 'seed.rhinostake.com:17356',
+          provider: 'RHINO'
+        },
+        {
+          id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
+          address: 'seeds.polkachu.com:17356',
+          provider: 'Polkachu'
+        },
+        {
+          id: '72cd4222818d25da5206092c3efc2c0dd0ec34fe',
+          address: '161.97.96.91:36656',
+          provider: 'AM Solutions'
+        },
+        {
+          id: '20e1000e88125698264454a884812746c2eb4807',
+          address: 'seeds.lavenderfive.com:17356',
+          provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          id: 'c8db99691545545402a1c45fa897f3cb1a05aea6',
+          address: 'nois-mainnet-seed.itrocket.net:36656',
+          provider: 'IT Rocket'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'nois.rpc.kjnodes.com:51659',
+          provider: 'kjnodes'
+        }
+      ]
+    },
+    apis: {
+      rpc: [
+        {
+          address: 'https://nois-rpc.nysa.network',
+          provider: 'nysa.network'
+        },
+        {
+          address: 'https://nois-rpc.lavenderfive.com:443',
+          provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://rpc-nois.mib.tech/',
+          provider: 'MadeInBlock'
+        },
+        {
+          address: 'https://rpc.noismain.mcbnode.online',
+          provider: 'mcbnode'
+        },
+        {
+          address: 'https://m-nois.rpc.utsa.tech',
+          provider: 'UTSA'
+        },
+        {
+          address: 'https://rpc-nois.ezstaking.dev',
+          provider: 'EZStaking'
+        },
+        {
+          address: 'https://nois-mainnet-rpc.itrocket.net',
+          provider: 'IT Rocket'
+        },
+        {
+          address: 'https://rpc.nois.nodestake.top',
+          provider: 'NodeStake'
+        },
+        {
+          address: 'https://rpc-nois.d-stake.xyz',
+          provider: 'D-Stake'
+        },
+        {
+          address: 'https://rpc.nois.hexnodes.co',
+          provider: 'HexNodes'
+        },
+        {
+          address: 'https://rpc-nois.sr20de.xyz',
+          provider: 'SR20DE'
+        },
+        {
+          address: 'https://nois-mainnet-rpc.autostake.com',
+          provider: 'AutoStake'
+        },
+        {
+          address: 'https://nois-rpc.polkachu.com',
+          provider: 'Polkachu'
+        },
+        {
+          address: 'https://nois.kingnodes.com',
+          provider: 'Kingnodes'
+        },
+        {
+          address: 'https://nois.rpc.kjnodes.com',
+          provider: 'kjnodes'
+        }
+      ],
+      grpc: [
+        {
+          address: 'https://nois-grpc.nysa.network',
+          provider: 'nysa.network'
+        },
+        {
+          address: 'https://nois-grpc.lavenderfive.com:443',
+          provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://grpc.noismain.mcbnode.online',
+          provider: 'mcbnode'
+        },
+        {
+          address: 'https://nois-mainnet-grpc.itrocket.net',
+          provider: 'IT Rocket'
+        },
+        {
+          address: 'https://grpc.nois.nodestake.top',
+          provider: 'NodeStake'
+        },
+        {
+          address: 'https://grpc-nois.d-stake.xyz',
+          provider: 'D-Stake'
+        },
+        {
+          address: 'https://grpc.nois.hexnodes.co',
+          provider: 'HexNodes'
+        },
+        {
+          address: 'https://grpc-nois.sr20de.xyz',
+          provider: 'SR20DE'
+        },
+        {
+          address: 'https://nois-testnet-grpc.autostake.com',
+          provider: 'AutoStake'
+        },
+        {
+          address: 'nois-grpc.polkachu.com:17390',
+          provider: 'Polkachu'
+        },
+        {
+          address: 'https://grpc-nois.kingnodes.com',
+          provider: 'Kingnodes'
+        },
+        {
+          address: 'nois.grpc.kjnodes.com:51090',
+          provider: 'kjnodes'
+        }
+      ],
+      rest: [
+        {
+          address: 'https://api.noismain.mcbnode.online',
+          provider: 'mcbnode'
+        },
+        {
+          address: 'https://m-nois.api.utsa.tech',
+          provider: 'UTSA'
+        },
+        {
+          address: 'https://nois-api.lavenderfive.com:443',
+          provider: 'Lavender.Five Nodes 🐝'
+        },
+        {
+          address: 'https://lcd-nois.ezstaking.dev',
+          provider: 'EZStaking'
+        },
+        {
+          address: 'https://lcd-nois.mib.tech/',
+          provider: 'MadeInBlock'
+        },
+        {
+          address: 'https://nois-mainnet-api.itrocket.net',
+          provider: 'IT Rocket'
+        },
+        {
+          address: 'https://api.nois.nodestake.top',
+          provider: 'NodeStake'
+        },
+        {
+          address: 'https://api-nois.d-stake.xyz',
+          provider: 'D-Stake'
+        },
+        {
+          address: 'https://lcd.nois.hexnodes.co',
+          provider: 'HexNodes'
+        },
+        {
+          address: 'https://api-nois.sr20de.xyz',
+          provider: 'SR20DE'
+        },
+        {
+          address: 'https://nois.api.m.stavr.tech',
+          provider: '🔥STAVR🔥'
+        },
+        {
+          address: 'https://nois-testnet-lcd.autostake.com',
+          provider: 'AutoStake'
+        },
+        {
+          address: 'https://nois-api.polkachu.com',
+          provider: 'Polkachu'
+        },
+        {
+          address: 'https://nois.kingnodes.com',
+          provider: 'Kingnodes'
+        },
+        {
+          address: 'https://nois.api.kjnodes.com',
+          provider: 'kjnodes'
+        }
+      ]
+    },
+    explorers: [
+      {
+        kind: 'explorers.guru',
+        url: 'https://nois.explorers.guru',
+        tx_page: 'https://nois.explorers.guru/transaction/${txHash}',
+        account_page: 'https://nois.explorers.guru/account/${accountAddress}'
+      }
+    ],
+    keywords: ['nois', 'randomness', 'drand', 'wasm']
+  },
+  {
+    $schema: '../chain.schema.json',
     chain_name: 'nomic',
     status: 'live',
     network_type: 'mainnet',
@@ -11389,7 +13072,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/nomic-io/nomic/develop/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'develop',
+          recommended_version: 'develop',
+          compatible_versions: ['develop', 'v3']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11486,7 +13176,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url: 'https://nymtech.net/genesis/genesis.json'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v.1.1',
+          recommended_version: 'v.1.1',
+          compatible_versions: ['v1.0'],
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64': 'https://github.com/nymtech/nym/releases/'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11714,7 +13415,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/ODIN-PROTOCOL/networks/master/mainnets/odin-mainnet-freya/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.6.2',
+          recommended_version: 'v0.6.2',
+          compatible_versions: ['v0.6.2']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11838,7 +13546,15 @@ const chains: Chain[] = [
       binaries: {},
       genesis: {
         genesis_url: 'https://github.com/okex/mainnet/blob/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.6.1.1',
+          recommended_version: 'v1.6.1.1',
+          compatible_versions: ['v1.2.2', 'v1.6.1.1'],
+          binaries: {}
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -11897,7 +13613,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.8.0',
+          recommended_version: 'v0.8.0',
+          compatible_versions: ['v0.8.0']
+        }
+      ]
     },
     fees: {
       fee_tokens: [
@@ -11930,7 +13653,7 @@ const chains: Chain[] = [
     apis: {
       rpc: [
         {
-          address: 'https://rpc.omniflix.kingnodes.com',
+          address: 'https://omniflix.kingnodes.com',
           provider: 'kingnodes'
         },
         {
@@ -11982,11 +13705,15 @@ const chains: Chain[] = [
         {
           address: 'https://omniflix.nodejumper.io:1317',
           provider: 'NODEJUMPER'
+        },
+        {
+          address: 'https://omniflix.kingnodes.com',
+          provider: 'kingnodes'
         }
       ],
       grpc: [
         {
-          address: 'grpc.omniflix.kingnodes.com:443',
+          address: 'grpc-omniflix.kingnodes.com:443',
           provider: 'kingnodes'
         },
         {
@@ -12070,12 +13797,34 @@ const chains: Chain[] = [
           'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd-arm'
       },
       cosmos_sdk_version: '0.44',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: '2.0.4',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/onomyprotocol/onomy/main/genesis/mainnet/genesis-mainnet-1.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.1',
+          recommended_version: 'v1.0.1',
+          compatible_versions: ['v1.0.1'],
+          cosmos_sdk_version: '0.44',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: '2.0.4',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd',
+            'linux/arm64':
+              'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd-arm'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -12178,7 +13927,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.40.3',
+          recommended_version: 'v0.40.3',
+          compatible_versions: ['v0.40.3'],
+          binaries: {
+            'linux/amd64':
+              'https://orai.s3.us-east-2.amazonaws.com/v0.40.3/oraid'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -12330,7 +14090,10 @@ const chains: Chain[] = [
           'https://github.com/osmosis-labs/osmosis/releases/download/v15.0.0/osmosisd-15.0.0-linux-arm64?checksum=sha256:94aee34e288148b155a2b0fdfe268a0bdc0d4a90de6db8f8a9cee74c2e829294'
       },
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       ibc_go_version: '4.3.0',
@@ -12398,7 +14161,24 @@ const chains: Chain[] = [
         {
           name: 'v15',
           tag: 'v15.0.0',
-          height: 8732500
+          height: 8732500,
+          recommended_version: 'v15.0.0',
+          compatible_versions: ['v15.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          ibc_go_version: '4.3.0',
+          ics_enabled: ['ics20-1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/osmosis-labs/osmosis/releases/download/v15.0.0/osmosisd-15.0.0-linux-amd64?checksum=sha256:6f5cead57c16c1e708df2a0f336e6e4494a026ba97b8d8afef95e5fc5b80b465',
+            'linux/arm64':
+              'https://github.com/osmosis-labs/osmosis/releases/download/v15.0.0/osmosisd-15.0.0-linux-arm64?checksum=sha256:94aee34e288148b155a2b0fdfe268a0bdc0d4a90de6db8f8a9cee74c2e829294'
+          }
         }
       ]
     },
@@ -12692,7 +14472,15 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/medibloc/panacea-mainnet/raw/master/panacea-3/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0.6',
+          recommended_version: 'v2.0.6',
+          compatible_versions: ['v2.0.5'],
+          binaries: {}
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -12768,7 +14556,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/envadiv/mainnet/main/passage-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.0',
+          recommended_version: 'v1.1.0',
+          compatible_versions: ['v1.1.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -12999,7 +14794,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/persistenceOne/genesisTransactions/master/core-1/final_genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v7.0.0',
+          recommended_version: 'v7.0.0',
+          compatible_versions: ['v7.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/persistenceOne/persistenceCore/releases/download/v7.0.0/persistenceCore-v7.0.0-linux-amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13243,7 +15049,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/planq-network/networks/main/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.3',
+          recommended_version: 'v1.0.3',
+          compatible_versions: ['v1.0.0', 'v1.0.1', 'v1.0.2'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Linux_x86_64.tar.gz',
+            'linux/arm64':
+              'https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Darwin_x86_64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Windows_x86_64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13256,6 +15081,11 @@ const chains: Chain[] = [
           id: '5966b4ef17da12ee63ef30e50512ad41d541195c',
           address: 'seeds-planq.sxlzptprjkt.xyz:18656',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          id: 'c443eb8888e96e260dc23b9ef3c5a5773ec0e261',
+          address: 'rpc.planq.nodexcapital.com:12756',
+          provider: 'NodeX Validator'
         }
       ],
       persistent_peers: [
@@ -13301,6 +15131,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-planq.sxlzptprjkt.xyz',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://rpc.planq.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       rest: [
@@ -13327,6 +15161,10 @@ const chains: Chain[] = [
         {
           address: 'https://api-planq.sxlzptprjkt.xyz',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://rest.planq.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ],
       grpc: [
@@ -13345,6 +15183,10 @@ const chains: Chain[] = [
         {
           address: 'https://grpc-planq.sxlzptprjkt.xyz:443',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://grpc.planq.nodexcapital.com:443',
+          provider: 'NodeX Validator'
         }
       ],
       'evm-http-jsonrpc': [
@@ -13359,6 +15201,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc-evm-planq.sxlzptprjkt.xyz',
           provider: 'sxlzptprjkt | VALIDATOR'
+        },
+        {
+          address: 'https://jsonrpc.planq.nodexcapital.com',
+          provider: 'NodeX Validator'
         }
       ]
     },
@@ -13392,6 +15238,11 @@ const chains: Chain[] = [
         kind: 'THE EXPLORER',
         url: 'https://explorer.sxlzptprjkt.xyz/planq',
         tx_page: 'https://explorer.sxlzptprjkt.xyz/planq/tx/${txHash}'
+      },
+      {
+        kind: 'NODEXPLORER',
+        url: 'https://explorer.nodexcapital.com/planq',
+        tx_page: 'https://explorer.nodexcapital.com/planq/tx/${txHash}'
       }
     ]
   },
@@ -13437,7 +15288,21 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v8.0.0',
+          recommended_version: 'v8.0.0',
+          compatible_versions: ['v8.0.0'],
+          binaries: {
+            'linux/amd64': '',
+            'linux/arm64': '',
+            'darwin/amd64': '',
+            'darwin/arm64': '',
+            'windows/amd64': ''
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13549,7 +15414,19 @@ const chains: Chain[] = [
         genesis_url:
           'https://raw.githubusercontent.com/provenance-io/mainnet/main/pio-mainnet-1/genesis.json'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v1.14.1',
+          recommended_version: 'v1.14.1',
+          compatible_versions: ['v1.14.1', 'v1.14.0'],
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64':
+              'https://github.com/provenance-io/provenance/releases/download/v1.14.1/provenance-linux-amd64-v1.14.1.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13645,7 +15522,7 @@ const chains: Chain[] = [
     ]
   },
   {
-    $schema: '../../chain.schema.json',
+    $schema: '../chain.schema.json',
     chain_name: 'quasar',
     status: 'live',
     network_type: 'mainnet',
@@ -13688,13 +15565,30 @@ const chains: Chain[] = [
       recommended_version: 'v0.1.0',
       compatible_versions: ['v0.1.0'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.27',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/quasar-finance/networks/main/quasar-1/definitive-genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.1.0',
+          recommended_version: 'v0.1.0',
+          compatible_versions: ['v0.1.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.27',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13717,6 +15611,11 @@ const chains: Chain[] = [
           id: 'e726816f42831689eab9378d5d577f1d06d25716',
           address: 'quasar-seed-2.allnodes.me:26656',
           provider: 'Allnodes.com ⚡️ Nodes & Staking'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'quasar.rpc.kjnodes.com:48659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -13743,6 +15642,10 @@ const chains: Chain[] = [
         {
           address: 'https://quasar-rpc.enigma-validator.com',
           provider: 'Enigma'
+        },
+        {
+          address: 'https://quasar.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -13761,6 +15664,10 @@ const chains: Chain[] = [
         {
           address: 'https://quasar-lcd.enigma-validator.com',
           provider: 'Enigma'
+        },
+        {
+          address: 'https://quasar.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -13769,8 +15676,12 @@ const chains: Chain[] = [
           provider: 'Lavender.Five Nodes 🐝'
         },
         {
-          address: 'https://quasar-rpc.polkachu.com',
+          address: 'quasar-grpc.polkachu.com:18290',
           provider: 'polkachu'
+        },
+        {
+          address: 'quasar.grpc.kjnodes.com:48090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -13822,17 +15733,35 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/ingenuity-build/quicksilver',
-      recommended_version: 'v1.2.7',
-      compatible_versions: ['v1.2.7'],
+      recommended_version: 'v1.2.9-hotfix.0',
+      compatible_versions: ['v1.2.9-hotfix.0'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.29',
       cosmwasm_enabled: true,
       ibc_go_version: '5.2.0',
       genesis: {
         genesis_url:
           'https://github.com/ingenuity-build/mainnet/raw/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.9-hotfix.0',
+          recommended_version: 'v1.2.9-hotfix.0',
+          compatible_versions: ['v1.2.9-hotfix.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true,
+          ibc_go_version: '5.2.0'
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -13870,6 +15799,11 @@ const chains: Chain[] = [
           id: 'e726816f42831689eab9378d5d577f1d06d25716',
           address: 'quicksilver-seed-2.allnodes.me:26656',
           provider: 'Allnodes.com ⚡️ Nodes & Staking'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'quicksilver.rpc.kjnodes.com:11659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -13899,20 +15833,16 @@ const chains: Chain[] = [
           provider: 'lesnik | UTSA'
         },
         {
-          address: 'https://rpc-quicksilver.nodeist.net',
-          provider: 'Nodeist'
-        },
-        {
           address: 'https://quicksilver-mainnet-rpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
         },
         {
-          address: 'https://quicksilver-rpc.ibs.team',
+          address: 'https://quicksilver-rpc.ibs.team:443',
           provider: 'Inter Blockchain Services'
         },
         {
-          address: 'wss://gql-testnet.quicksilver.forbole.com/websocket',
-          provider: 'Forbole'
+          address: 'https://quicksilver.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -13933,8 +15863,8 @@ const chains: Chain[] = [
           provider: 'lesnik | UTSA'
         },
         {
-          address: 'https://api-quicksilver.nodeist.net',
-          provider: 'Nodeist'
+          address: 'https://quicksilver.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
@@ -13949,6 +15879,10 @@ const chains: Chain[] = [
         {
           address: 'quicksilver-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'quicksilver.grpc.kjnodes.com:11090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -14021,7 +15955,9 @@ const chains: Chain[] = [
         {
           name: 'v0.2.3',
           tag: 'v0.2.3',
-          height: 473400
+          height: 473400,
+          recommended_version: 'v0.3.0',
+          compatible_versions: ['v0.3.0']
         }
       ],
       genesis: {
@@ -14198,6 +16134,10 @@ const chains: Chain[] = [
         {
           address: 'rebus-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'rebus.grpc.kjnodes.com:21090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -14274,13 +16214,40 @@ const chains: Chain[] = [
           'https://github.com/regen-network/regen-ledger/releases/download/v5.0.0/regen-ledger_5.0.0_darwin_arm64.zip'
       },
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: '5.2',
       ics_enabled: ['ics20-1', 'ics27-1'],
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/regen-network/mainnet/main/regen-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v5.0.0',
+          recommended_version: 'v5.0.0',
+          compatible_versions: ['v5.0.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: '5.2',
+          ics_enabled: ['ics20-1', 'ics27-1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/regen-network/regen-ledger/releases/download/v5.0.0/regen-ledger_5.0.0_linux_amd64.zip',
+            'linux/arm64':
+              'https://github.com/regen-network/regen-ledger/releases/download/v5.0.0/regen-ledger_5.0.0_linux_arm64.zip',
+            'darwin/amd64':
+              'https://github.com/regen-network/regen-ledger/releases/download/v5.0.0/regen-ledger_5.0.0_darwin_amd64.zip',
+            'darwin/arm64':
+              'https://github.com/regen-network/regen-ledger/releases/download/v5.0.0/regen-ledger_5.0.0_darwin_arm64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -14444,7 +16411,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/rizon-world/mainnet/master/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.4.1',
+          recommended_version: 'v0.4.1',
+          compatible_versions: ['v0.4.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -14640,7 +16614,13 @@ const chains: Chain[] = [
           name: 'v1.8',
           tag: 'v1.8.0',
           height: 7760000,
-          next_version_name: 'v1.9'
+          next_version_name: 'v1.9',
+          recommended_version: 'v1.8.0',
+          compatible_versions: ['v1.8.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/scrtlabs/SecretNetwork/releases/download/v1.8.0/secretnetwork_1.8.0_mainnet_goleveldb_amd64.deb'
+          }
         }
       ]
     },
@@ -14672,36 +16652,22 @@ const chains: Chain[] = [
     apis: {
       'grpc-web': [
         {
-          address: 'https://secret-4.api.trivium.network:9091',
-          provider: 'Trivium | Trivium.Network'
-        },
-        {
-          address: 'http://scrt-rpc.blockpane.com:9091',
-          provider: '[ block pane ]'
-        }
-      ],
-      wss: [
-        {
-          address: 'wss://scrt-rpc.agoranodes.com',
-          provider: 'AgoraNodes'
+          address: 'https://wgrpc.secret.express',
+          provider: 'Secret Community API team - Secret Express'
         }
       ],
       rpc: [
         {
-          address: 'https://secret-4.api.trivium.network:26657',
-          provider: 'Trivium | Trivium.Network'
+          address: 'https://rpc.secret.express',
+          provider: 'Secret Community API team - Secret Express'
+        },
+        {
+          address: 'https://scrt.public-rpc.com',
+          provider: 'ANKR'
         },
         {
           address: 'https://secret-rpc.lavenderfive.com:443',
           provider: 'Lavender.Five Nodes 🐝'
-        },
-        {
-          address: 'https://rpc.secret.forbole.com/',
-          provider: 'Forbole'
-        },
-        {
-          address: 'https://secretnetwork-rpc.stakely.io',
-          provider: 'Stakely.io'
         },
         {
           address: 'https://rpc-secret.whispernode.com:443',
@@ -14710,16 +16676,12 @@ const chains: Chain[] = [
       ],
       rest: [
         {
-          address: 'https://secret-4.api.trivium.network:1317',
-          provider: 'Trivium | Trivium.Network'
+          address: 'https://lcd.secret.express',
+          provider: 'Secret Community API team - Secret Express'
         },
         {
           address: 'https://secret-api.lavenderfive.com:443',
           provider: 'Lavender.Five Nodes 🐝'
-        },
-        {
-          address: 'https://secretnetwork-lcd.stakely.io',
-          provider: 'Stakely.io'
         },
         {
           address: 'https://lcd-secret.whispernode.com:443',
@@ -14730,10 +16692,6 @@ const chains: Chain[] = [
         {
           address: 'secret-grpc.lavenderfive.com:443',
           provider: 'Lavender.Five Nodes 🐝'
-        },
-        {
-          address: 'secret-mainnet-grpc.autostake.net:443',
-          provider: 'AutoStake 🛡️ Slash Protected'
         }
       ]
     },
@@ -14806,7 +16764,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/sentinel-official/networks/main/sentinelhub-2/genesis.zip'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.9.3',
+          recommended_version: 'v0.9.3',
+          compatible_versions: ['v0.9.3']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -14961,7 +16926,10 @@ const chains: Chain[] = [
           'https://github.com/ShareRing/Shareledger/releases/download/v1.4.1/shareledger'
       },
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.27',
       cosmwasm_enabled: true,
       ibc_go_version: '3.0.0',
@@ -14994,7 +16962,22 @@ const chains: Chain[] = [
           name: 'v4',
           tag: 'v1.4.1',
           height: 7507600,
-          next_version_name: 'v5'
+          next_version_name: 'v5',
+          recommended_version: '1.4.1',
+          compatible_versions: ['1.4.1'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.27',
+          cosmwasm_enabled: true,
+          ibc_go_version: '3.0.0',
+          ics_enabled: ['ics20-1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/ShareRing/Shareledger/releases/download/v1.4.1/shareledger'
+          }
         }
       ]
     },
@@ -15076,7 +17059,22 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/ShentuChain/mainnet/main/shentu-2.2/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.4.0',
+          recommended_version: 'v2.4.0',
+          compatible_versions: ['v2.6.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/shentufoundation/shentu/releases/download/v2.6.0/shentud_2.6.0_linux_amd64',
+            'darwin/amd64':
+              'https://github.com/shentufoundation/shentu/releases/download/v2.6.0/shentud_2.6.0_arm64_macos',
+            'windows/amd64':
+              'https://github.com/shentufoundation/shentu/releases/download/v2.6.0/shentud_2.6.0_win_x86_64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -15099,6 +17097,11 @@ const chains: Chain[] = [
           id: 'e726816f42831689eab9378d5d577f1d06d25716',
           address: 'shentu-seed-2.allnodes.me:26656',
           provider: 'Allnodes.com ⚡️ Nodes & Staking'
+        },
+        {
+          id: '8f91d396e3395210ef3a8394d48d1888af6d01cd',
+          address: 'shentu-seed.ramuchi.tech:56656',
+          provider: 'ramuchi.tech'
         }
       ],
       persistent_peers: [
@@ -15118,6 +17121,10 @@ const chains: Chain[] = [
         {
           address: 'https://certik-rpc.polkachu.com',
           provider: 'Polkachu'
+        },
+        {
+          address: 'https://shentu-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       rest: [
@@ -15128,12 +17135,20 @@ const chains: Chain[] = [
         {
           address: 'https://certik-api.polkachu.com',
           provider: 'Polkachu'
+        },
+        {
+          address: 'https://shentu-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       grpc: [
         {
           address: 'certik-grpc.polkachu.com:14090',
           provider: 'Polkachu'
+        },
+        {
+          address: 'https://shentu-grpc.ramuchi.tech:12090',
+          provider: 'ramuchi.tech'
         }
       ]
     },
@@ -15213,7 +17228,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/Sifchain/networks/blob/master/betanet/sifchain-1/genesis.json.gz?raw=true'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.14-beta',
+          recommended_version: 'v1.0.14-beta',
+          compatible_versions: ['v1.0.14-beta'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/Sifchain/sifnode/releases/download/v1.0.14-beta/sifnoded-v1.0.14-beta-linux-amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -15394,7 +17420,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/PeggyJV/sommelier/main/contrib/mainnet/sommelier-2/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v5.0.0',
+          recommended_version: 'v5.0.0',
+          compatible_versions: ['v5.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_linux_amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_darwin_amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_darwin_arm64.tar.gz',
+            'windows/amd64':
+              'https://github.com/PeggyJV/sommelier/releases/download/v5.0.0/sommelier_5.0.0_windows_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -15533,7 +17578,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/stafihub/network/main/mainnets/stafihub-1(dragonberry)/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.2.3',
+          recommended_version: 'v0.2.3',
+          compatible_versions: ['v0.2.3']
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -15665,7 +17717,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/public-awesome/mainnet/main/stargaze-1/genesis.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v9.0.0',
+          recommended_version: 'v9.0.0',
+          compatible_versions: ['v9.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -15701,6 +17760,11 @@ const chains: Chain[] = [
           id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
           address: 'stargaze-seed-1.allnodes.me:26656',
           provider: 'Allnodes.com ⚡️ Nodes & Staking'
+        },
+        {
+          id: '344c62c700a59de6137ccd6cade56721cb1e9777',
+          address: 'stargaze-seed.ramuchi.tech:26656',
+          provider: 'ramuchi.tech'
         }
       ],
       persistent_peers: [
@@ -15756,6 +17820,10 @@ const chains: Chain[] = [
         {
           address: 'https://stargaze-mainnet-rpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://stargaze-rpc.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       rest: [
@@ -15802,6 +17870,10 @@ const chains: Chain[] = [
         {
           address: 'https://lcd-stargaze.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://stargaze-api.ramuchi.tech',
+          provider: 'ramuchi.tech'
         }
       ],
       grpc: [
@@ -15816,6 +17888,10 @@ const chains: Chain[] = [
         {
           address: 'stargaze-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://stargaze-grpc.ramuchi.tech:9090',
+          provider: 'ramuchi.tech'
         }
       ]
     },
@@ -15881,7 +17957,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://gist.githubusercontent.com/davepuchyr/6bea7bf369064d118195e9b15ea08a0f/raw/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.10.18',
+          recommended_version: 'v0.10.18',
+          compatible_versions: ['v0.10.17', 'v0.10.18']
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -15984,17 +18067,35 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/Stride-Labs/stride',
-      recommended_version: 'v7.0.0',
-      compatible_versions: ['v7.0.0'],
+      recommended_version: 'v8.0.0',
+      compatible_versions: ['v8.0.0'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.29',
       cosmwasm_enabled: true,
       ibc_go_version: '5.1.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Stride-Labs/testnet/main/mainnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v8.0.0',
+          recommended_version: 'v8.0.0',
+          compatible_versions: ['v8.0.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true,
+          ibc_go_version: '5.1.0'
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -16216,6 +18317,10 @@ const chains: Chain[] = [
         {
           address: 'juno-grpc.cosmosrescue.com:9090',
           provider: 'cosmosrescue'
+        },
+        {
+          address: 'stride.grpc.kjnodes.com:16090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -16293,7 +18398,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/TERITORI/teritori-chain/raw/mainnet/mainnet/teritori-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.3.1',
+          recommended_version: 'v1.3.1',
+          compatible_versions: ['v1.3.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -16536,6 +18648,10 @@ const chains: Chain[] = [
         {
           address: 'teritori-mainnet-grpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'teritori.grpc.kjnodes.com:19090',
+          provider: 'kjnodes'
         }
       ]
     },
@@ -16606,10 +18722,136 @@ const chains: Chain[] = [
           high_gas_price: 50
         },
         {
+          denom: 'usdr',
+          low_gas_price: 0.52469,
+          average_gas_price: 0.52469,
+          high_gas_price: 0.52469
+        },
+        {
           denom: 'uusd',
           low_gas_price: 0.75,
           average_gas_price: 0.75,
           high_gas_price: 0.75
+        },
+        {
+          denom: 'ukrw',
+          low_gas_price: 850,
+          average_gas_price: 850,
+          high_gas_price: 850
+        },
+        {
+          denom: 'umnt',
+          low_gas_price: 2142.855,
+          average_gas_price: 2142.855,
+          high_gas_price: 2142.855
+        },
+        {
+          denom: 'ueur',
+          low_gas_price: 0.625,
+          average_gas_price: 0.625,
+          high_gas_price: 0.625
+        },
+        {
+          denom: 'ucny',
+          low_gas_price: 4.9,
+          average_gas_price: 4.9,
+          high_gas_price: 4.9
+        },
+        {
+          denom: 'ujpy',
+          low_gas_price: 81.85,
+          average_gas_price: 81.85,
+          high_gas_price: 81.85
+        },
+        {
+          denom: 'ugbp',
+          low_gas_price: 0.55,
+          average_gas_price: 0.55,
+          high_gas_price: 0.55
+        },
+        {
+          denom: 'uinr',
+          low_gas_price: 54.4,
+          average_gas_price: 54.4,
+          high_gas_price: 54.4
+        },
+        {
+          denom: 'ucad',
+          low_gas_price: 0.95,
+          average_gas_price: 0.95,
+          high_gas_price: 0.95
+        },
+        {
+          denom: 'uchf',
+          low_gas_price: 0.7,
+          average_gas_price: 0.7,
+          high_gas_price: 0.7
+        },
+        {
+          denom: 'uaud',
+          low_gas_price: 0.95,
+          average_gas_price: 0.95,
+          high_gas_price: 0.95
+        },
+        {
+          denom: 'usgd',
+          low_gas_price: 1,
+          average_gas_price: 1,
+          high_gas_price: 1
+        },
+        {
+          denom: 'uthb',
+          low_gas_price: 23.1,
+          average_gas_price: 23.1,
+          high_gas_price: 23.1
+        },
+        {
+          denom: 'usek',
+          low_gas_price: 6.25,
+          average_gas_price: 6.25,
+          high_gas_price: 6.25
+        },
+        {
+          denom: 'unok',
+          low_gas_price: 6.25,
+          average_gas_price: 6.25,
+          high_gas_price: 6.25
+        },
+        {
+          denom: 'udkk',
+          low_gas_price: 4.5,
+          average_gas_price: 4.5,
+          high_gas_price: 4.5
+        },
+        {
+          denom: 'uidr',
+          low_gas_price: 10900,
+          average_gas_price: 10900,
+          high_gas_price: 10900
+        },
+        {
+          denom: 'uphp',
+          low_gas_price: 38,
+          average_gas_price: 38,
+          high_gas_price: 38
+        },
+        {
+          denom: 'uhkd',
+          low_gas_price: 5.85,
+          average_gas_price: 5.85,
+          high_gas_price: 5.85
+        },
+        {
+          denom: 'umyr',
+          low_gas_price: 3,
+          average_gas_price: 3,
+          high_gas_price: 3
+        },
+        {
+          denom: 'utwd',
+          low_gas_price: 20,
+          average_gas_price: 20,
+          high_gas_price: 20
         }
       ]
     },
@@ -16621,19 +18863,40 @@ const chains: Chain[] = [
       ]
     },
     codebase: {
-      git_repo: 'https://github.com/terra-money/core/',
-      recommended_version: 'v0.5.17',
-      compatible_versions: ['v0.5.17', 'v0.5.16'],
+      git_repo: 'https://github.com/classic-terra/core/releases',
+      recommended_version: 'v1.1.0',
+      compatible_versions: ['v1.1.0'],
       binaries: {
         'linux/amd64':
-          'https://github.com/terra-money/core/releases/download/v0.5.17/terra_0.5.17_Linux_x86_64.tar.gz',
-        'darwin/amd64':
-          'https://github.com/terra-money/core/releases/download/v0.5.17/terra_0.5.17_Darwin_x86_64.tar.gz'
+          'https://github.com/terra-money/classic-core/releases/download/v1.1.0/terra_1.1.0_Linux_x86_64.tar.gz?checksum=sha256:fd83c14bcfadea36ad444c219ab557b9d65d2f74be0684498a5c41e3df7cb535'
       },
       genesis: {
-        genesis_url:
-          'https://columbus-genesis.s3.ap-northeast-1.amazonaws.com/columbus-5-genesis.json'
-      }
+        name: '1.0.5',
+        genesis_url: 'https://tfl-columbus-5.s3.amazonaws.com/genesis.json'
+      },
+      versions: [
+        {
+          name: '1.0.5',
+          tag: 'v1.0.5-full-archive',
+          height: 0,
+          next_version_name: '1.1.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/classic-core/releases/download/v1.0.5-full-archive/terra_1.0.5_Linux_x86_64.tar.gz?checksum=sha256:af3ee3bd99bd719d6d9a93a40af9f0bc49bb3866c68e923e284876784126f38c'
+          }
+        },
+        {
+          name: '1.1.0',
+          tag: 'v1.1.0',
+          height: 11734000,
+          recommended_version: 'v1.1.0',
+          compatible_versions: ['v1.1.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/classic-core/releases/download/v1.1.0/terra_1.1.0_Linux_x86_64.tar.gz?checksum=sha256:fd83c14bcfadea36ad444c219ab557b9d65d2f74be0684498a5c41e3df7cb535'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -16653,6 +18916,10 @@ const chains: Chain[] = [
     },
     apis: {
       rpc: [
+        {
+          address: 'https://rpc.terrarebels.net',
+          provider: 'Terrarebels'
+        },
         {
           address: 'https://terra-classic-rpc.publicnode.com',
           provider: 'Allnodes'
@@ -16676,15 +18943,27 @@ const chains: Chain[] = [
           provider: 'Terrarebels'
         },
         {
+          address: 'https://terra-classic-lcd.publicnode.com',
+          provider: 'Allnodes'
+        },
+        {
           address: 'https://api-terra-ia.cosmosia.notional.ventures/',
           provider: 'Notional'
         },
         {
           address: 'https://terraclassic-mainnet-lcd.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://terraclassic-lcd-server-01.stakely.io',
+          provider: 'Stakely'
         }
       ],
       grpc: [
+        {
+          address: 'terra-classic-grpc.publicnode.com',
+          provider: 'Allnodes'
+        },
         {
           address: 'grpc-terra-ia.cosmosia.notional.ventures:443',
           provider: 'Notional'
@@ -16705,6 +18984,13 @@ const chains: Chain[] = [
         kind: 'atomscan',
         url: 'https://atomscan.com/terra',
         tx_page: 'https://atomscan.com/terra/transactions/${txHash}'
+      },
+      {
+        kind: 'finder',
+        url: 'https://finder.terra.money/classic',
+        tx_page: 'https://finder.terra.money/classic/tx/${txHash}',
+        account_page:
+          'https://finder.terra.money/classic/address/${accountAddress}'
       }
     ]
   },
@@ -16725,8 +19011,8 @@ const chains: Chain[] = [
         {
           denom: 'uluna',
           fixed_min_gas_price: 0.0125,
-          low_gas_price: 0.015,
-          average_gas_price: 0.025,
+          low_gas_price: 0.0125,
+          average_gas_price: 0.015,
           high_gas_price: 0.04
         }
       ]
@@ -16740,19 +19026,55 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/terra-money/core/',
-      recommended_version: 'v2.2.0',
-      compatible_versions: ['v2.2.0'],
+      recommended_version: 'v2.2.1',
+      compatible_versions: ['v2.2.1', 'v2.2.0'],
+      cosmwasm_enabled: true,
       binaries: {
         'linux/amd64':
-          'https://github.com/terra-money/core/releases/download/v2.2.0/terra_2.2.0_Linux_x86_64.tar.gz',
-        'darwin/amd64':
-          'https://github.com/terra-money/core/releases/download/v2.2.0/terra_2.2.0_Darwin_x86_64.tar.gz'
+          'https://github.com/terra-money/core/releases/download/v2.2.1/terra_2.2.1_Linux_x86_64.tar.gz?checksum=sha256:8a9353ae3c33a750ce2a9d236f00c12c5449c41fad96e9885a5c0b8678fcf8bc'
       },
       genesis: {
-        genesis_url:
-          'https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json'
+        name: '2.0.0',
+        genesis_url: 'https://tfl-phoenix-1.s3.amazonaws.com/genesis.json'
       },
-      cosmwasm_enabled: true
+      versions: [
+        {
+          name: '2.0.0',
+          tag: 'v2.0.1',
+          height: 0,
+          next_version_name: '2.1.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Linux_x86_64.tar.gz?checksum=sha256:eae23aad59b36ea2adaa541a7662a6119569279d2e6c4013e3deee96e9263b30',
+            'darwin/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Darwin_x86_64.tar.gz?checksum=sha256:c2a6b1bff922b127a31757bdb0c8f05a34f3b1f879dee1e862f9f8b748e15a54'
+          }
+        },
+        {
+          name: '2.1.0',
+          tag: 'v2.1.4',
+          height: 890000,
+          next_version_name: '2.2.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.1.4/terra_2.1.4_Linux_x86_64.tar.gz?checksum=sha256:e05b85ae2eac5df886f4f9d0ecf719b82ebe4da4fc59cae93a34af7c3e89ddfb',
+            'darwin/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.1.4/terra_2.1.4_Darwin_x86_64.tar.gz?checksum=sha256:4b66ebf800cb903f7b6c07686636eff43e686f5956c9fadc307f077afd7f23bb'
+          }
+        },
+        {
+          name: '2.2.0',
+          tag: 'v2.2.1',
+          height: 2979805,
+          recommended_version: 'v2.2.1',
+          compatible_versions: ['v2.2.1', 'v2.2.0'],
+          cosmwasm_enabled: true,
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.2.1/terra_2.2.1_Linux_x86_64.tar.gz?checksum=sha256:8a9353ae3c33a750ce2a9d236f00c12c5449c41fad96e9885a5c0b8678fcf8bc'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -16831,6 +19153,10 @@ const chains: Chain[] = [
         {
           address: 'https://terra-mainnet-rpc.autostake.com:443',
           provider: 'AutoStake 🛡️ Slash Protected'
+        },
+        {
+          address: 'https://phoenix-rpc.terra.dev:443',
+          provider: 'Terraform Labs'
         }
       ],
       rest: [
@@ -16849,6 +19175,10 @@ const chains: Chain[] = [
         {
           address: 'https://lcd-terra2.whispernode.com:443',
           provider: 'WhisperNode🤐'
+        },
+        {
+          address: 'https://phoenix-lcd.terra.dev:443',
+          provider: 'Terraform Labs'
         }
       ],
       grpc: [
@@ -16868,16 +19198,23 @@ const chains: Chain[] = [
     },
     explorers: [
       {
+        kind: 'atomscan',
+        url: 'https://atomscan.com/terra2',
+        tx_page: 'https://atomscan.com/terra/transactions/${txHash}'
+      },
+      {
         kind: 'finder',
         url: 'http://finder.terra.money/',
-        tx_page: 'https://finder.terra.money/mainnet/tx/${txHash}'
+        tx_page: 'https://finder.terra.money/mainnet/tx/${txHash}',
+        account_page:
+          'https://finder.terra.money/mainnet/address/${accountAddress}'
       }
     ]
   },
   {
     $schema: '../chain.schema.json',
     chain_name: 'archwaytestnet',
-    chain_id: 'constantine-1',
+    chain_id: 'constantine-2',
     pretty_name: 'Archway testnet',
     status: 'live',
     network_type: 'testnet',
@@ -16900,13 +19237,13 @@ const chains: Chain[] = [
     apis: {
       rpc: [
         {
-          address: 'https://rpc.constantine-1.archway.tech',
+          address: 'https://rpc.constantine-2.archway.tech',
           provider: 'Quickapi'
         }
       ],
       rest: [
         {
-          address: 'https://api.constantine-1.archway.tech',
+          address: 'https://api.constantine-2.archway.tech',
           provider: 'Quickapi'
         }
       ]
@@ -16914,9 +19251,9 @@ const chains: Chain[] = [
     explorers: [
       {
         kind: 'archwayscan',
-        url: 'https://explorer.constantine-1.archway.tech',
+        url: 'https://explorer.constantine-2.archway.tech',
         tx_page:
-          'https://explorer.constantine-1.archway.tech/transactions/${txHash}'
+          'https://explorer.constantine-2.archway.tech/transactions/${txHash}'
       }
     ]
   },
@@ -17010,7 +19347,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/devnets/bitcanna-dev-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.6.3-rc1',
+          recommended_version: 'v1.6.3-rc1',
+          compatible_versions: ['v1.6.2'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/BitCannaGlobal/bcna/releases/download/v1.6.2/bcna_linux_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17086,7 +19434,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/BitCannaGlobal/testnet-bcna-cosmos/main/instructions/bitcanna-dev-6/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0.0-beta',
+          recommended_version: 'v2.0.0-beta',
+          compatible_versions: ['v2.0.0-beta'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/BitCannaGlobal/bcna/releases/download/v2.0.0-beta/bcna_linux_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -17154,7 +19513,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/celestiaorg/networks/master/blockspacerace/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.12.0',
+          recommended_version: 'v0.12.0',
+          compatible_versions: ['v0.12.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17215,7 +19581,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/celestiaorg/networks/master/arabica-5/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.12.0',
+          recommended_version: 'v0.12.0',
+          compatible_versions: ['v0.12.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17275,7 +19648,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.11.1',
+          recommended_version: 'v0.11.1',
+          compatible_versions: ['v0.12.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17332,20 +19712,49 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/cheqd/cheqd-node',
-      recommended_version: 'v1.2.2',
-      compatible_versions: ['v1.2.2', 'v1.2.4'],
+      recommended_version: 'v1.4.0',
+      compatible_versions: ['v1.2.5', 'v1.3.0', 'v1.4.0'],
       binaries: {
         'linux/amd64':
-          'https://github.com/cheqd/cheqd-node/releases/download/v1.2.2/cheqd-noded-1.2.2-Linux-x86_64.tar.gz',
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-amd64.tar.gz',
         'linux/arm64':
-          'https://github.com/cheqd/cheqd-node/releases/download/v1.2.2/cheqd-noded-1.2.2-Linux-arm64.tar.gz'
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-arm64.tar.gz',
+        'darwin/amd64':
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-amd64.tar.gz',
+        'darwin/arm64':
+          'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-arm64.tar.gz'
       },
-      cosmos_sdk_version: '0.46.8',
-      tendermint_version: '0.34.24',
+      cosmos_sdk_version: '0.46.10',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.26'
+      },
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/cheqd/cheqd-node/main/networks/testnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.4.0',
+          recommended_version: 'v1.4.0',
+          compatible_versions: ['v1.2.5', 'v1.3.0', 'v1.4.0'],
+          cosmos_sdk_version: '0.46.10',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34.26'
+          },
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-linux-arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-amd64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/cheqd/cheqd-node/releases/download/v1.4.0/cheqd-noded-1.4.0-darwin-arm64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17443,7 +19852,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/DigitalKitchenLabs/testnets/main/kitten-04/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.0.0',
+          recommended_version: 'v2.0.0',
+          compatible_versions: ['v2.0.0']
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -17511,7 +19927,10 @@ const chains: Chain[] = [
           'https://github.com/CoreumFoundation/coreum/releases/download/v0.1.1/cored-linux-arm64?checksum=sha256:7d383d1a1bc9185677b25c05ebbe01cf20dd6c779ca4301065359ea6e3bcefa3'
       },
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       genesis: {
@@ -17523,7 +19942,22 @@ const chains: Chain[] = [
         {
           name: 'v0',
           tag: 'v0.1.1',
-          height: 0
+          height: 0,
+          recommended_version: 'v0.1.1',
+          compatible_versions: ['v0.1.1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/CoreumFoundation/coreum/releases/download/v0.1.1/cored-linux-amd64?checksum=sha256:21db2ea1b31d9e8202e0d11f2bee0de78d2e677c07fd75a7db1f3958bf49146c',
+            'linux/arm64':
+              'https://github.com/CoreumFoundation/coreum/releases/download/v0.1.1/cored-linux-arm64?checksum=sha256:7d383d1a1bc9185677b25c05ebbe01cf20dd6c779ca4301065359ea6e3bcefa3'
+          },
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true
         }
       ]
     },
@@ -17625,7 +20059,26 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/cosmos/testnets/raw/master/public/genesis.json.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v9.0.1',
+          recommended_version: 'v9.0.1',
+          compatible_versions: ['v9.0.1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-linux-amd64',
+            'linux/arm64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-linux-arm64',
+            'darwin/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-darwin-amd64',
+            'darwin/arm64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-darwin-arm64',
+            'windows/amd64':
+              'https://github.com/cosmos/gaia/releases/download/v9.0.1/gaiad-v9.0.1-windows-amd64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17749,13 +20202,30 @@ const chains: Chain[] = [
       recommended_version: 'v0.27',
       compatible_versions: ['v0.27'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.27',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni-5/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.27',
+          recommended_version: 'v0.27',
+          compatible_versions: ['v0.27'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.27',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -17807,7 +20277,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/CudoVentures/cudos-builders/cudos-master/docker/config/genesis.testnet.public.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.1.0',
+          recommended_version: 'v1.1.0',
+          compatible_versions: ['v1.1.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -17938,7 +20415,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/empowerchain/empowerchain/main/testnets/altruistic-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.0.1',
+          recommended_version: 'v0.0.1',
+          compatible_versions: ['v0.0.1']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -18082,15 +20566,42 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/evmos/evmos',
-      recommended_version: 'v11.0.0-rc3',
-      compatible_versions: ['v11.0.0-rc3'],
+      recommended_version: 'v12.0.0-rc4',
+      compatible_versions: ['v12.0.0-rc4'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: 'v6.1.0',
       genesis: {
         genesis_url:
           'https://github.com/evmos/testnets/raw/main/evmos_9000-4/genesis.zip'
-      }
+      },
+      versions: [
+        {
+          name: 'v11.0.0-rc3',
+          recommended_version: 'v11.0.0-rc3',
+          compatible_versions: ['v11.0.0-rc3'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: 'v6.1.0'
+        },
+        {
+          name: 'v12.0.0',
+          recommended_version: 'v12.0.0-rc4',
+          compatible_versions: ['v12.0.0-rc4'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: 'v6.1.0'
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -18175,7 +20686,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://server.gitopia.com/raw/gitopia/testnets/master/gitopia-janus-testnet-2/genesis.json.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.0',
+          recommended_version: 'v1.2.0',
+          compatible_versions: ['v1.2.0']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -18246,7 +20764,14 @@ const chains: Chain[] = [
       compatible_versions: ['v1.0.0'],
       genesis: {
         genesis_url: 'https://rpc-testnet.humans.zone/genesis'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0']
+        }
+      ]
     },
     apis: {
       rpc: [
@@ -18313,7 +20838,22 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.1.5',
+          recommended_version: 'v0.1.5',
+          compatible_versions: ['v0.1.5'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/hypersign-protocol/hid-node/releases/download/v0.1.5/hid-noded-0.1.5-linux-amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/hypersign-protocol/hid-node/releases/download/v0.1.5/hid-noded-0.1.5-linux-arm64.tar.gz',
+            'darwin/arm64':
+              'https://github.com/hypersign-protocol/hid-node/releases/download/v0.1.5/hid-noded-0.1.5-darwin-arm64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -18385,7 +20925,23 @@ const chains: Chain[] = [
       },
       genesis: {
         genesis_url: 'https://s.imversed.com/test-net/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v2.4.0',
+          recommended_version: 'v2.4.0',
+          compatible_versions: ['v2.4.0'],
+          binaries: {
+            'linux/amd64': 'https://s.imversed.com/imversed_linux_amd64.tar.gz',
+            'darwin/arm64':
+              'https://s.imversed.com/imversed_darwin_arm64.tar.gz',
+            'darwin/amd64':
+              'https://s.imversed.com/imversed_darwin_amd64.tar.gz',
+            'windows/amd64':
+              'https://s.imversed.com/imversed_windows_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -18468,7 +21024,20 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'aws s3 cp s3://injective-snapshots/testnet/genesis.json . --no-sign-request'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.10.2',
+          recommended_version: 'v1.10.2',
+          compatible_versions: ['v1.10.2'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/InjectiveLabs/testnet/releases/download/v1.10.2-1678712142/linux-amd64.zip',
+            'darwin/amd64':
+              'https://github.com/InjectiveLabs/testnet/releases/download/v1.10.2-1678712142/darwin-amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -18580,7 +21149,20 @@ const chains: Chain[] = [
           'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.2-alpha.1/canined-Linux',
         'darwin/amd64':
           'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.2-alpha.1/canined-macOS'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.2-alpha.1',
+          recommended_version: 'v1.2.2-alpha.1',
+          compatible_versions: ['v1.2.2-alpha.1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.2-alpha.1/canined-Linux',
+            'darwin/amd64':
+              'https://github.com/JackalLabs/canine-chain/releases/download/v1.2.2-alpha.1/canined-macOS'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -18735,17 +21317,48 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/CosmosContracts/juno',
-      recommended_version: 'v13.0.0-beta.1',
-      compatible_versions: ['v13.0.0-beta.1'],
+      recommended_version: 'v14.0.0-alpha.1',
+      compatible_versions: ['v14.0.0-alpha.1'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       ibc_go_version: '4.3.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni-6/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v13.0.0-beta.1',
+          recommended_version: 'v13.0.0-beta.1',
+          compatible_versions: ['v13.0.0-beta.1'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          ibc_go_version: '4.3.0'
+        },
+        {
+          name: 'v14.0.0-alpha.1',
+          recommended_version: 'v14.0.0-alpha.1',
+          compatible_versions: ['v14.0.0-alpha.1'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          ibc_go_version: '4.3.0'
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -18846,7 +21459,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/KiFoundation/ki-networks/v0.1/Testnet/kichain-t-4/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'Testnet-3.0.0-beta',
+          recommended_version: 'Testnet-3.0.0-beta',
+          compatible_versions: ['Testnet-3.0.0-beta']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -18933,7 +21553,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.4.0',
+          recommended_version: 'v0.4.0',
+          compatible_versions: ['v0.4.0']
+        }
+      ]
     },
     apis: {
       rpc: [
@@ -18988,7 +21615,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/KYVENetwork/chain/releases/download/v0.0.1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.6.3',
+          recommended_version: 'v0.6.3',
+          compatible_versions: ['v0.6.3'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/KYVENetwork/chain/releases/download/v0.6.3/chain_linux_amd64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -19063,7 +21701,24 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/KYVENetwork/networks/main/kaon-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0-rc0',
+          recommended_version: 'v1.0.0-rc0',
+          compatible_versions: ['v1.0.0-rc0'],
+          binaries: {
+            'linux/amd64':
+              'https://files.kyve.network/chain/v1.0.0-rc0/kyved_linux_amd64.tar.gz',
+            'linux/arm64':
+              'https://files.kyve.network/chain/v1.0.0-rc0/kyved_linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://files.kyve.network/chain/v1.0.0-rc0/kyved_darwin_amd64.tar.gz',
+            'darwin/arm64':
+              'https://files.kyve.network/chain/v1.0.0-rc0/kyved_darwin_arm64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -19291,14 +21946,32 @@ const chains: Chain[] = [
       recommended_version: 'v0.2.0',
       compatible_versions: [],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       ibc_go_version: '4.2.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/baryon-1/baryon-1-genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.2.0',
+          recommended_version: 'v0.2.0',
+          compatible_versions: [],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          ibc_go_version: '4.2.0'
+        }
+      ]
     },
     logo_URIs: {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/neutron-black-logo.png',
@@ -19404,6 +22077,107 @@ const chains: Chain[] = [
     ]
   },
   {
+    $schema: '../chain.schema.json',
+    chain_name: 'nobltestnet',
+    chain_id: 'grand-1',
+    website: 'https://nobleassets.xyz/',
+    pretty_name: 'Noble',
+    status: 'live',
+    network_type: 'mainnet',
+    bech32_prefix: 'noble',
+    daemon_name: 'nobled',
+    node_home: '$HOME/.nobled',
+    key_algos: ['secp256k1'],
+    slip44: 118,
+    staking: {
+      staking_tokens: [
+        {
+          denom: 'ustake'
+        }
+      ],
+      lock_duration: {
+        time: '1814400s'
+      }
+    },
+    codebase: {
+      git_repo: 'https://github.com/strangelove-ventures/noble',
+      recommended_version: 'v0.4.1',
+      compatible_versions: ['v0.4.1'],
+      cosmos_sdk_version: 'v0.45',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
+      cosmwasm_enabled: false,
+      ibc_go_version: 'v3.4.0',
+      ics_enabled: ['ics20-1'],
+      genesis: {
+        name: 'v0.3.0',
+        genesis_url:
+          'https://github.com/strangelove-ventures/noble-networks/blob/main/testnet/grand-1/genesis.json'
+      },
+      versions: [
+        {
+          name: 'v0.3.0',
+          tag: 'v0.3.0',
+          height: 0,
+          next_version_name: 'v0.4.1'
+        },
+        {
+          name: 'v0.4.1',
+          tag: 'v0.4.2',
+          height: 302000,
+          recommended_version: 'v0.4.1',
+          compatible_versions: ['v0.4.1'],
+          cosmos_sdk_version: 'v0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_enabled: false,
+          ibc_go_version: 'v3.4.0',
+          ics_enabled: ['ics20-1']
+        }
+      ]
+    },
+    peers: {
+      persistent_peers: [
+        {
+          id: '38179b18853d6a8cb86b99881e02cf72f18b9d0f',
+          address: '34.127.46.223:26656',
+          provider: 'Strangelove'
+        },
+        {
+          id: '57546d799a1cdef74b9a174052821a6e93636dfc',
+          address: '34.145.87.4:26656',
+          provider: 'Strangelove'
+        },
+        {
+          id: '6b76ad22a73897e3c39c7d87b7d12a3b7d690bff',
+          address: '34.168.48.128:26656',
+          provider: 'Strangelove'
+        },
+        {
+          id: 'f8a0d8942bcf02b94ed875ded9cb23944a53e48a',
+          address: '141.95.97.28:15656',
+          provider: 'B-Harvest'
+        },
+        {
+          id: 'd82829d886635ffcfcef66adfaa725acb522e1c6',
+          address: '83.136.255.243:26656',
+          provider: 'Everstake'
+        }
+      ]
+    },
+    explorers: [
+      {
+        kind: 'ping.pub',
+        url: 'https://explore.strange.love/grand-1',
+        tx_page: 'https://explore.strange.love/grand-1/tx/${txHash}'
+      }
+    ]
+  },
+  {
     $schema: '../../chain.schema.json',
     chain_name: 'nolustestnet',
     status: 'live',
@@ -19441,7 +22215,10 @@ const chains: Chain[] = [
       recommended_version: 'v0.2.2',
       compatible_versions: [],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.30',
       cosmwasm_enabled: true,
       ibc_go_version: '4.2.0',
@@ -19449,7 +22226,19 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/nolus-protocol/nolus-networks/main/testnet/nolus-rila/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.2.2',
+          recommended_version: 'v0.2.2',
+          compatible_versions: [],
+          cosmos_sdk_version: '0.45',
+          cosmwasm_version: '0.30',
+          cosmwasm_enabled: true,
+          ibc_go_version: '4.2.0',
+          ics_enabled: ['ics20-1', 'ics27-1']
+        }
+      ]
     },
     logo_URIs: {
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nolustestnet/images/nolus.svg',
@@ -19518,16 +22307,45 @@ const chains: Chain[] = [
     },
     codebase: {
       git_repo: 'https://github.com/osmosis-labs/osmosis',
-      recommended_version: 'v14.0.0-rc1',
-      compatible_versions: ['v14.0.0-rc1'],
+      recommended_version: 'v15.0.0-rc3',
+      compatible_versions: ['v15.0.0-rc3'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.29',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://github.com/osmosis-labs/networks/raw/main/osmo-test-4/genesis.tar.bz2'
-      }
+      },
+      versions: [
+        {
+          name: 'v14.0.0-rc1',
+          recommended_version: 'v14.0.0-rc1',
+          compatible_versions: ['v14.0.0-rc1'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true
+        },
+        {
+          name: 'v15.0.0-rc3',
+          recommended_version: 'v15.0.0-rc3',
+          compatible_versions: ['v15.0.0-rc3'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -19630,7 +22448,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/persistenceOne/genesisTransactions/master/test-core-1/final_genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v6.0.0-rc5',
+          recommended_version: 'v6.0.0-rc5',
+          compatible_versions: ['v6.0.0-rc5'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/persistenceOne/persistenceCore/archive/refs/tags/v6.0.0-rc5.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -19754,13 +22583,30 @@ const chains: Chain[] = [
       recommended_version: 'v0.0.2-alpha-11',
       compatible_versions: ['v0.0.2-alpha-11'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.27',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/quasar-finance/questnet/main/v04/definitive-genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.0.2-alpha-11',
+          recommended_version: 'v0.0.2-alpha-11',
+          compatible_versions: ['v0.0.2-alpha-11'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.27',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -19915,14 +22761,32 @@ const chains: Chain[] = [
       recommended_version: 'v1.4.0-rc7',
       compatible_versions: ['v1.4.0-rc7'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.29',
       cosmwasm_enabled: true,
       ibc_go_version: '5.2.0',
       genesis: {
         genesis_url:
           'https://github.com/ingenuity-build/testnets/raw/main/innuendo/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.4.0-rc7',
+          recommended_version: 'v1.4.0-rc7',
+          compatible_versions: ['v1.4.0-rc7'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true,
+          ibc_go_version: '5.2.0'
+        }
+      ]
     },
     logo_URIs: {
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quicksilver/images/qck.svg'
@@ -20004,13 +22868,34 @@ const chains: Chain[] = [
           'https://github.com/cosmic-horizon/QWOYN/releases/download/v1.0.0/qwoynd_1.0.0_linux_amd64.zip'
       },
       cosmos_sdk_version: '0.42.10',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: '3.0.0',
       ics_enabled: ['ics20-1', 'ics27-1'],
       genesis: {
         genesis_url:
           'https://github.com/cosmic-horizon/testnets/blob/main/higgs-boson-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: '0.42.10',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: '3.0.0',
+          ics_enabled: ['ics20-1', 'ics27-1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/cosmic-horizon/QWOYN/releases/download/v1.0.0/qwoynd_1.0.0_linux_amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -20081,7 +22966,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/saage-tech/network-testnet-1/blob/master/networks/saage-testnet-3/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.4.1',
+          recommended_version: 'v0.4.1',
+          compatible_versions: ['v0.4.1']
+        }
+      ]
     },
     peers: {
       persistent_peers: [
@@ -20167,7 +23059,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://storage.googleapis.com/stakeordie-pulsar-2/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.3.1',
+          recommended_version: 'v1.3.1',
+          compatible_versions: ['v1.3.0', 'v1.3.1'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/scrtlabs/SecretNetwork/releases/download/v1.3.1/secretnetwork_1.3.1_testnet_goleveldb_amd64.deb'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20240,7 +23143,7 @@ const chains: Chain[] = [
   },
   {
     $schema: '../../chain.schema.json',
-    chain_name: 'seitestnet2',
+    chain_name: 'seidevnet3',
     chain_id: 'sei-devnet-3',
     pretty_name: 'Sei Devnet 3',
     status: 'live',
@@ -20274,7 +23177,23 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-3/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: '2.0.40beta',
+          recommended_version: '2.0.40beta',
+          compatible_versions: [
+            '2.0.27beta',
+            '2.0.29eta',
+            '2.0.31beta',
+            '2.0.32beta',
+            '2.0.36beta',
+            '2.0.37beta',
+            '2.0.39beta',
+            '2.0.40beta'
+          ]
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20288,14 +23207,28 @@ const chains: Chain[] = [
     apis: {
       rpc: [
         {
+          address: 'https://rpc.sei-devnet-3.seinetwork.io',
+          provider: 'Sei Foundation'
+        },
+        {
           address: 'https://sei-testnet-2-rpc.brocha.in',
           provider: 'Brochain'
         }
       ],
       rest: [
         {
+          address: 'https://rest.sei-devnet-3.seinetwork.io',
+          provider: 'Sei Foundation'
+        },
+        {
           address: 'https://sei-testnet-2-rest.brocha.in',
           provider: 'Brochain'
+        }
+      ],
+      grpc: [
+        {
+          address: 'https://grpc.sei-devnet-3.seinetwork.io',
+          provider: 'Sei Foundation'
         }
       ]
     },
@@ -20340,7 +23273,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: '1.0.6beta',
+          recommended_version: '1.0.6beta',
+          compatible_versions: ['1.0.6beta']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20418,7 +23358,19 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/sei-protocol/testnet/main/atlantic-2/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: '2.0.40beta',
+          recommended_version: '2.0.40beta',
+          compatible_versions: [
+            '2.0.34beta',
+            '2.0.37beta',
+            '2.0.39beta',
+            '2.0.40beta'
+          ]
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20491,14 +23443,32 @@ const chains: Chain[] = [
       recommended_version: 'v1.0.0',
       compatible_versions: ['v1.0.0'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.25',
       cosmwasm_enabled: true,
       ibc_go_version: '2.2.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.25',
+          cosmwasm_enabled: true,
+          ibc_go_version: '2.2.0'
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20602,13 +23572,30 @@ const chains: Chain[] = [
       recommended_version: 'v7.0.0',
       compatible_versions: ['v7.0.0'],
       cosmos_sdk_version: '0.45',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.28',
       cosmwasm_enabled: true,
       genesis: {
         genesis_url:
           'https://github.com/public-awesome/testnets/blob/main/elgafar-1/genesis/genesis.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v7.0.0',
+          recommended_version: 'v7.0.0',
+          compatible_versions: ['v7.0.0'],
+          cosmos_sdk_version: '0.45',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.28',
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -20694,7 +23681,24 @@ const chains: Chain[] = [
       },
       genesis: {
         genesis_url: 'https://rpc.stateset.zone/genesis'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.0.0',
+          recommended_version: 'v1.0.0',
+          compatible_versions: ['v1.0.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-amd64',
+            'linux/arm64':
+              'https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-arm64',
+            'darwin/amd64':
+              'https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-darwin-amd64',
+            'windows/amd64':
+              'https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-windows-amd64.exe'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -20760,12 +23764,28 @@ const chains: Chain[] = [
       recommended_version: 'v5.1.1-testnet',
       compatible_versions: ['v5.1.1-testnet'],
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       ibc_go_version: '5.1.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/Stride-Labs/mainnet/main/testnet/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v5.1.1-testnet',
+          recommended_version: 'v5.1.1-testnet',
+          compatible_versions: ['v5.1.1-testnet'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          ibc_go_version: '5.1.0'
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -20807,7 +23827,10 @@ const chains: Chain[] = [
     codebase: {
       git_repo: 'github.com/terpnetwork/terp-core.git',
       recommended_version: 'v0.4.0',
-      tendermint_version: '0.34.24',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.24'
+      },
       compatible_versions: ['v0.4.0', 'v0.4.0-1-g8ef7c32'],
       genesis: {
         genesis_url:
@@ -20816,7 +23839,22 @@ const chains: Chain[] = [
       binaries: {
         'linux/amd64':
           'https://github.com/terpnetwork/terp-core/archive/refs/tags/v0.4.0.tar.gz'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.4.0',
+          recommended_version: 'v0.4.0',
+          compatible_versions: ['v0.4.0', 'v0.4.0-1-g8ef7c32'],
+          consensus: {
+            type: 'tendermint',
+            version: '0.34.24'
+          },
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terpnetwork/terp-core/archive/refs/tags/v0.4.0.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -20891,6 +23929,151 @@ const chains: Chain[] = [
   },
   {
     $schema: '../../chain.schema.json',
+    chain_name: 'terra2testnet',
+    status: 'live',
+    network_type: 'testnet',
+    website: 'https://www.terra.money/',
+    pretty_name: 'Terra 2.0',
+    chain_id: 'pisco-1',
+    daemon_name: 'terrad',
+    node_home: '$HOME/.terra',
+    bech32_prefix: 'terra',
+    slip44: 330,
+    fees: {
+      fee_tokens: [
+        {
+          denom: 'uluna',
+          fixed_min_gas_price: 0.0125,
+          low_gas_price: 0.0125,
+          average_gas_price: 0.015,
+          high_gas_price: 0.04
+        }
+      ]
+    },
+    staking: {
+      staking_tokens: [
+        {
+          denom: 'uluna'
+        }
+      ]
+    },
+    codebase: {
+      git_repo: 'https://github.com/terra-money/core/',
+      recommended_version: 'v2.3.0',
+      compatible_versions: ['v2.3.0'],
+      binaries: {
+        'linux/amd64':
+          'https://github.com/terra-money/core/releases/download/v2.3.0/terra_2.3.0_Linux_x86_64.tar.gz?checksum=sha256:d3bd1bd7bf6bd8d59b3a85ac39f1e532a950da2773638e9ca9b60bb1af400aef',
+        'linux/arm64':
+          'https://github.com/terra-money/core/releases/download/v2.3.0/terra_2.3.0_Linux_arm64.tar.gz?checksum=sha256:0723910a733de2a6173109ba3c839c8bac01a114426a52bc62774ee97aa68899'
+      },
+      genesis: {
+        name: '2.0.0',
+        genesis_url: 'https://tfl-phoenix-1.s3.amazonaws.com/genesis.json'
+      },
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: '2.0.0',
+          tag: 'v2.0.0-rc.1',
+          height: 0,
+          next_version_name: '2.1.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.0.0-rc.0/terra_2.0.0-rc.0_Linux_x86_64.tar.gz?checksum=sha256:2427cf3aa7934f591eac0708156d424f55d3dbb6062f6f111b770bee8f414c91',
+            'darwin/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.0.0-rc.0/terra_2.0.0-rc.0_Darwin_x86_64.tar.gz?checksum=sha256:72869d7279362e8d63e2afb02c17e1eef0ad0cb6285a30dfa47c571fa5be1c30'
+          }
+        },
+        {
+          name: '2.1.0',
+          tag: 'v2.1.0-beta.1',
+          height: 838500,
+          next_version_name: '2.2.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.1.0-beta.1/terra_2.1.0-beta.1_Linux_x86_64.tar.gz?checksum=sha256:c6e6ace1d5b5f3f365f6d71489dbeda645f196ea10f8f03103fb9648131bfec1'
+          }
+        },
+        {
+          name: '2.2.0',
+          tag: 'v2.2.1',
+          height: 2777777,
+          next_version_name: '2.3.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.2.1/terra_2.2.1_Linux_x86_64.tar.gz?checksum=sha256:8a9353ae3c33a750ce2a9d236f00c12c5449c41fad96e9885a5c0b8678fcf8bc'
+          }
+        },
+        {
+          name: '2.3.0',
+          tag: 'v2.3.0',
+          height: 4712048,
+          recommended_version: 'v2.3.0',
+          compatible_versions: ['v2.3.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/terra-money/core/releases/download/v2.3.0/terra_2.3.0_Linux_x86_64.tar.gz?checksum=sha256:d3bd1bd7bf6bd8d59b3a85ac39f1e532a950da2773638e9ca9b60bb1af400aef',
+            'linux/arm64':
+              'https://github.com/terra-money/core/releases/download/v2.3.0/terra_2.3.0_Linux_arm64.tar.gz?checksum=sha256:0723910a733de2a6173109ba3c839c8bac01a114426a52bc62774ee97aa68899'
+          }
+        }
+      ]
+    },
+    peers: {
+      seeds: [
+        {
+          id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
+          address: 'testnet-seeds.polkachu.com:11756',
+          provider: 'Polkachu'
+        }
+      ],
+      persistent_peers: [
+        {
+          id: '0d194f5236a420147b05d9556ac0cf928c36e647',
+          address: '65.109.23.114:11756',
+          provider: 'Polkachu'
+        }
+      ]
+    },
+    apis: {
+      rpc: [
+        {
+          address: 'https://pisco-rpc.terra.dev:443',
+          provider: 'Terraform Labs'
+        },
+        {
+          address: 'https://terra-testnet-rpc.polkachu.com:443',
+          provider: 'Polkachu'
+        }
+      ],
+      rest: [
+        {
+          address: 'https://pisco-lcd.terra.dev:443',
+          provider: 'Terraform Labs'
+        },
+        {
+          address: 'https://terra-testnet-api.polkachu.com:443',
+          provider: 'Polkachu'
+        }
+      ],
+      grpc: [
+        {
+          address: 'terra-testnet-grpc.polkachu.com:11790',
+          provider: 'Polkachu'
+        }
+      ]
+    },
+    explorers: [
+      {
+        kind: 'finder',
+        url: 'http://finder.terra.money/testnet/',
+        tx_page: 'https://finder.terra.money/testnet/tx/${txHash}'
+      }
+    ]
+  },
+  {
+    $schema: '../../chain.schema.json',
     chain_name: 'ulastestnet',
     status: 'live',
     network_type: 'testnet',
@@ -20906,7 +24089,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/ulasnetwork/chain-config/main/ulas/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.0.1',
+          recommended_version: 'v0.0.1',
+          compatible_versions: ['v0.0.1']
+        }
+      ]
     },
     apis: {
       rpc: [
@@ -20976,7 +24166,15 @@ const chains: Chain[] = [
         genesis_url:
           'https://raw.githubusercontent.com/confio/tgrade-networks/main/mainnet-1/config/genesis.json'
       },
-      cosmwasm_enabled: true
+      cosmwasm_enabled: true,
+      versions: [
+        {
+          name: 'v2.0.0',
+          recommended_version: 'v2.0.0',
+          compatible_versions: ['v2.0.0'],
+          cosmwasm_enabled: true
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -21052,7 +24250,14 @@ const chains: Chain[] = [
       compatible_versions: ['chaosnet-multichain'],
       genesis: {
         genesis_url: 'https://rpc.thorchain.info/genesis'
-      }
+      },
+      versions: [
+        {
+          name: 'chaosnet-multichain',
+          recommended_version: 'chaosnet-multichain',
+          compatible_versions: ['chaosnet-multichain']
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -21148,14 +24353,36 @@ const chains: Chain[] = [
           'https://github.com/umee-network/umee/releases/download/v4.2.0/umeed-v4.2.0-linux-amd64'
       },
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '0.29',
       cosmwasm_enabled: true,
       ibc_go_version: '5.2.0',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/umee-network/mainnet/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v4.2.0',
+          recommended_version: 'v4.2.0',
+          compatible_versions: ['v4.2.0'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '0.29',
+          cosmwasm_enabled: true,
+          ibc_go_version: '5.2.0',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/umee-network/umee/releases/download/v4.2.0/umeed-v4.2.0-linux-amd64'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -21322,7 +24549,18 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/unification-com/mainnet/master/latest/genesis.json > $HOME/.und_mainchain/config/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.6.3',
+          recommended_version: 'v1.6.3',
+          compatible_versions: ['v1.6.3'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/unification-com/mainchain/releases/download/v1.6.3/und_v1.6.3_linux_x86_64.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -21418,14 +24656,36 @@ const chains: Chain[] = [
           'https://github.com/UptickNetwork/uptick/releases/download/v0.2.4/uptick-linux-amd64-v0.2.4.tar.gz'
       },
       cosmos_sdk_version: '0.46',
-      tendermint_version: '0.34',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34'
+      },
       cosmwasm_version: '',
       cosmwasm_enabled: false,
       ibc_go_version: '5.0.1',
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/uptick-network/mainnet/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v0.2.4',
+          recommended_version: 'v0.2.4',
+          compatible_versions: ['v0.2.4'],
+          cosmos_sdk_version: '0.46',
+          consensus: {
+            type: 'tendermint',
+            version: '0.34'
+          },
+          cosmwasm_version: '',
+          cosmwasm_enabled: false,
+          ibc_go_version: '5.0.1',
+          binaries: {
+            'linux/amd64':
+              'https://github.com/UptickNetwork/uptick/releases/download/v0.2.4/uptick-linux-amd64-v0.2.4.tar.gz'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [
@@ -21433,6 +24693,11 @@ const chains: Chain[] = [
           id: 'f97a75fb69d3a5fe893dca7c8d238ccc0bd66a8f',
           address: 'uptick.seed.brocha.in:30600',
           provider: 'Brochain'
+        },
+        {
+          id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+          address: 'uptick.rpc.kjnodes.com:15659',
+          provider: 'kjnodes'
         }
       ],
       persistent_peers: [
@@ -21452,6 +24717,10 @@ const chains: Chain[] = [
         {
           address: 'https://rpc.uptick.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://uptick.rpc.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       rest: [
@@ -21462,12 +24731,20 @@ const chains: Chain[] = [
         {
           address: 'https://api.uptick.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'https://uptick.api.kjnodes.com',
+          provider: 'kjnodes'
         }
       ],
       grpc: [
         {
           address: 'https://grpc.uptick.nodestake.top',
           provider: 'NodeStake'
+        },
+        {
+          address: 'uptick.grpc.kjnodes.com:15090',
+          provider: 'kjnodes'
         }
       ],
       'evm-http-jsonrpc': [
@@ -21487,6 +24764,11 @@ const chains: Chain[] = [
         kind: 'NodeStake Explorer',
         url: 'https://explorer.nodestake.top/uptick',
         tx_page: 'https://explorer.nodestake.top/uptick/tx/${txHash}'
+      },
+      {
+        kind: 'cosmotracker',
+        url: 'https://cosmotracker.com/uptick',
+        tx_page: 'https://cosmotracker.com/uptick/tx/${txHash}'
       }
     ]
   },
@@ -21535,7 +24817,24 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://raw.githubusercontent.com/vidulum/mainnet/main/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.0',
+          recommended_version: 'v1.2.0',
+          compatible_versions: ['v1.2.0'],
+          binaries: {
+            'linux/amd64':
+              'https://github.com/vidulum/mainnet/releases/download/v1.2.0/vidulum_linux_amd64.tar.gz',
+            'linux/arm64':
+              'https://github.com/vidulum/mainnet/releases/download/v1.2.0/vidulum_linux_arm64.tar.gz',
+            'darwin/amd64':
+              'https://github.com/vidulum/mainnet/releases/download/v1.2.0/vidulum_darwin_amd64.tar.gz',
+            'windows/amd64':
+              'https://github.com/vidulum/mainnet/releases/download/v1.2.0/vidulum_windows_amd64.zip'
+          }
+        }
+      ]
     },
     peers: {
       seeds: [],
@@ -21646,7 +24945,14 @@ const chains: Chain[] = [
       genesis: {
         genesis_url:
           'https://github.com/xpladev/mainnet/blob/main/dimension_37-1/genesis.json'
-      }
+      },
+      versions: [
+        {
+          name: 'v1.2.0',
+          recommended_version: 'v1.2.0',
+          compatible_versions: ['v1.2.0']
+        }
+      ]
     },
     peers: {
       seeds: [

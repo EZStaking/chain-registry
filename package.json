@@ -1,5 +1,5 @@
 {
-  "name": "chain-registry",
+  "name": "@ezstakingtools/chain-registry",
   "version": "0.0.1",
   "publishConfig": {
     "access": "restricted"
@@ -35,6 +35,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cosmology-tech/chain-registry"
+    "url": "https://github.com/EZStaking/chain-registry"
   }
 }
